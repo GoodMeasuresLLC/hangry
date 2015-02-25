@@ -38,7 +38,7 @@ This recipe is a preparation of optional ingredients, then you build the tacos a
 Fold over and dig in, with a nice IPA or crisp white wine!
       eos
       #should == instructions.strip
-      should != nil
+      should_not == nil
     end
     its(:name) { should == "Steve's Fish Tacos" }
     its(:nutrition) {
