@@ -33,7 +33,8 @@ module Hangry
     def parse_author
       author_node = node_with_itemprop(:author)
       author = if author_node['itemtype'] == "http://schema.org/Person"
-        author_node.css('[itemprop = "name"]').first['content']
+        #author_node.css('[itemprop = "name"]').first['content']
+        author_node.css('[itemprop = "name"]').first.content
       else
         author_node.content
       end

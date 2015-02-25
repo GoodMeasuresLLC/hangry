@@ -1,10 +1,16 @@
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
   context "standard food network recipe" do
-    subject { Hangry.parse(File.read("spec/fixtures/schema_org/food_network_schema_org.html")) }
+    let(:html) { File.read("spec/fixtures/schema_org/food_network_schema_org.html") }
+    subject { Hangry.parse(html) }
     
+    it "should use the correct parser" do
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::SchemaOrgRecipeParser)
+    end
+
     its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html' }
     its(:cook_time) { should == 20 }
     its(:description) { should == nil }
@@ -108,7 +114,7 @@ Make sure your cakes are completely cooled before you being to ice and cut them.
     its(:yield) { should == "12 to 14 servings" }
 
     it 'should parse the name of a schema.org Person when they are the author' do
-      expect(subject.author).to eq('Food Network Kitchens')
+      expect(subject.author).to eq('Food Network Kitchen')
     end
 
   end
