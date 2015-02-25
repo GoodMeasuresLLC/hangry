@@ -20,7 +20,15 @@ task :update_fixtures do
     ['http://www.taste.com.au/recipes/24586/lemon+melting+moments',                           'spec/fixtures/schema.org/data-vocabulary_org/taste.com.au.html'],
     ['http://allrecipes.com/Recipe/Roasted-Vegetable-and-Couscous-Salad/Detail.aspx',         'spec/fixtures/schema_org/allrecipes.html'],
     ['http://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232', 'spec/fixtures/schema_org/betty_crocker.html'],
-    ['http://www.copykat.com/2013/03/13/mcdonalds-shamrock-shake/',                           'spec/fixtures/schema_org/copykat.com.html']
+    ['http://www.copykat.com/2013/03/13/mcdonalds-shamrock-shake/',                            'spec/fixtures/schema_org/copykat.com.html'],
+    ['http://www.eatingwell.com/recipes/sauteed_chicken_breasts_with_creamy_chive_sauce.html', 'spec/fixtures/schema_org/eatingwell.com.html'],
+    ['http://www.food.com/recipe/panda-express-orange-chicken-103215', 'spec/fixtures/schema_org/food.com.html'],
+    ['http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html', 'spec/fixtures/schema_org/food_network_schema_org.html'],
+    ['http://www.foodnetwork.com/recipes/food-network-kitchens/easter-bunny-cake-recipe/index.html', 'spec/fixtures/schema_org/food_network_with_blank_ingredients.html'],
+    ['http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables','spec/fixtures/schema_org/foodandwine.com.html']
+
+
+
   ].each do |source, fixture|
     begin
       puts "fetching #{source} to update #{fixture}"
