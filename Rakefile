@@ -25,10 +25,21 @@ task :update_fixtures do
     ['http://www.food.com/recipe/panda-express-orange-chicken-103215', 'spec/fixtures/schema_org/food.com.html'],
     ['http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html', 'spec/fixtures/schema_org/food_network_schema_org.html'],
     ['http://www.foodnetwork.com/recipes/food-network-kitchens/easter-bunny-cake-recipe/index.html', 'spec/fixtures/schema_org/food_network_with_blank_ingredients.html'],
-    ['http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables','spec/fixtures/schema_org/foodandwine.com.html']
-
-
-
+    ['http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables','spec/fixtures/schema_org/foodandwine.com.html'],
+    ['http://www.pillsbury.com/recipes/big-cheesy-pepperoni-hand-pies/a17766e6-30ce-4a0c-af08-72533bb9b449', 'spec/fixtures/schema_org/pillsbury.com.html'],
+    ['http://www.bbc.co.uk/food/recipes/paella_7100', 'spec/fixtures/hrecipe/bbc.co.uk.html'],
+    ['http://www.bigoven.com/recipe/steves-fish-tacos/178920', 'spec/fixtures/hrecipe/bigoven.html'],
+    ['http://www.campbellskitchen.com/recipes/recipedetails?recipeid=60821', 'spec/fixtures/hrecipe/campbellskitchen.com.html'],
+    ['http://www.cooking.com/recipes-and-more/recipes/garlic-shrimp-recipe-41.aspx', 'spec/fixtures/hrecipe/cooking.com.html'],
+    ['http://www.cooks.com/recipe/oc0mk7z3/lemon-bars-deluxe.html', 'spec/fixtures/hrecipe/cooks.com.html'],
+    ['http://www.drinksmixer.com/drink2438.html', 'spec/fixtures/hrecipe/drinksmixer.com.html'],
+    ['http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289', 'spec/fixtures/hrecipe/epicurious.html'],
+    ['http://www.grouprecipes.com/135867/deep-dark-chocolate-cheesecake.html', 'spec/fixtures/hrecipe/grouprecipes.com.html'],
+    ['http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm', 'spec/fixtures/hrecipe/homecooking.about.com.html'],
+    ['http://www.jamieoliver.com/recipes/pork-recipes/neck-fillet-steak/', 'spec/fixtures/hrecipe/jamieoliver.com.html'],
+    ['http://www.mrfood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268', 'spec/fixtures/hrecipe/mrfood.com.html'],
+    ['http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm', 'spec/fixtures/hrecipe/southernfood.about.com.html'],
+    ['http://www.tasteofhome.com/recipes/rhubarb-popover-pie', 'spec/fixtures/hrecipe/tasteofhome.com.html'],
   ].each do |source, fixture|
     begin
       puts "fetching #{source} to update #{fixture}"
