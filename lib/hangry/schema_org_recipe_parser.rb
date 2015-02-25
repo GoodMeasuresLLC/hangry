@@ -56,7 +56,13 @@ module Hangry
       }.reject(&:blank?)
     end
     def parse_instructions
-      nodes_with_itemprop(:recipeInstructions).map(&:content).join("\n")
+      # => NOT THIS:
+      #nodes_with_itemprop(:recipeInstructions).map(&:content).join("\n")
+      inst = ""
+      nodes_with_itemprop(:recipeInstructions).map { |i|
+        inst += i.content.strip + "\n" unless inst.include?(i.content.strip)
+      }
+      inst 
     end
     def parse_name
       node_with_itemprop(:name).content
