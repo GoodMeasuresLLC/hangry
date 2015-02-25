@@ -29,7 +29,7 @@ describe Hangry do
         "1 large egg white, beaten"
       ]
     }
-    its(:name) { should == "Strawberry-Rhubarb Pie with Sour Cream Crust Recipe" }
+    its(:name) { should == "Strawberry-Rhubarb Pie with Sour Cream Crust" }
     its(:nutrition) do
       should == {
         calories: nil,
