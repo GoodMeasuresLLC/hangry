@@ -57,7 +57,7 @@ Divide tortilla chips between 6 plates. Spoon chicken mixture evenly over chips.
     its(:prep_time) { should == nil }
     its(:published_date) { should == nil }
     its(:total_time) { should == 20 }
-    its(:yield) { should == "1 Serving" }
+    its(:yield) { should == "6" }
 
   end
 
