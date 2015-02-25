@@ -7,7 +7,7 @@ describe Hangry do
     let(:html) { File.read("spec/fixtures/hrecipe/homecooking.about.com.html") }
     subject { Hangry.parse(html) }
 
-    its(:author) { should == "Peggy Trowbridge Filippone, About.com Guide" }
+    its(:author) { should == "By Peggy Trowbridge Filippone" }
     its(:canonical_url) { should == "http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm" }
     its(:cook_time) { should == 25 }
     its(:description) { should == "The combination of key limes and white chocolate is irresistable. Use this basic recipe for incredibly moist and delightfully tangy sweet muffins or cake." }

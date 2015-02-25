@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
@@ -55,46 +56,7 @@ describe Hangry do
 
     its(:instructions) {
       instructions = <<-EOS
-1
-Place chicken pieces in large bowl.
-2
-Stir in egg, salt, pepper and 1 tablespoon oil and mix well.
-3
-Stir cornstarch and flour together.
-4
-Mix flour mixture and egg mixture.
-5
-Add chicken pieces, stirring to coat.
-6
-Heat oil for deep-frying in wok or deep-fryer to 375 degrees.
-7
-Add chicken, small batches at a time, and fry 3 to 4 minutes or until golden crisp.
-8
-(Do not overcook chicken).
-9
-Remove chicken from oil with slotted spoon and drain on paper towels; set aside.
-10
-Clean wok and heat 15 seconds over high heat.
-11
-Add 1 tablespoon oil.
-12
-Add ginger and garlic and stir-fry until fragrant; about 10 seconds.
-13
-Add and stir-fry crushed chiles and green onions.
-14
-Add rice wine and stir 3 seconds.
-15
-Add Orange Sauce and bring to boil.
-16
-Add cooked chicken, stirring until well mixed.
-17
-Stir water into remaining 1 tablespoon cornstarch until smooth and add to chicken.
-18
-Heat until sauce is thickned.
-19
-Stir in sesame oil and orange zest if desired.
-20
-Serve over jasmine rice.
+Place chicken pieces in large bowl.\nStir in egg, salt, pepper and 1 tablespoon oil and mix well.\nStir cornstarch and flour together.\nCoat with egg mixture.\nCoat with flour mixture.\nAdd chicken pieces, stirring to coat.\nHeat oil for deep-frying in wok or deep-fryer to 375 degrees.\nAdd chicken, small batches at a time, and fry 3 to 4 minutes or until golden crisp.\n(Do not overcook chicken).\nRemove chicken from oil with slotted spoon and drain on paper towels; set aside.\nClean wok and heat 15 seconds over high heat.\nAdd 1 tablespoon oil.\nAdd ginger and garlic and stir-fry until fragrant; about 10 seconds.\nAdd and stir-fry crushed chiles and green onions.\nAdd rice wine and stir 3 seconds.\nAdd Orange Sauce and bring to boil.\nAdd cooked chicken, stirring until well mixed.\nStir water into remaining 1 tablespoon cornstarch until smooth and add to chicken.\nHeat until sauce is thickned.\nStir in sesame oil and orange zest if desired.\nServe over jasmine rice.
       EOS
       should == instructions.strip
     }
