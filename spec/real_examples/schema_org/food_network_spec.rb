@@ -48,7 +48,7 @@ Place a mound of stuffing on each breast and wrap and roll breast over the stuff
     its(:yield) { should == "4 servings" }
 
     it 'should parse the name of a schema.org Person when they are the author' do
-      subject.author.should == 'Rachael Ray'
+      expect(subject.author).to eq('Rachael Ray')
     end
 
   end
@@ -79,7 +79,7 @@ Place a mound of stuffing on each breast and wrap and roll breast over the stuff
       ]
     end
     it "should filter out blank ingredients" do
-      subject.ingredients.should_not include ""
+      expect(subject.ingredients).not_to include ""
     end
 
     its(:instructions) do
@@ -108,7 +108,7 @@ Make sure your cakes are completely cooled before you being to ice and cut them.
     its(:yield) { should == "12 to 14 servings" }
 
     it 'should parse the name of a schema.org Person when they are the author' do
-      subject.author.should == 'Food Network Kitchens'
+      expect(subject.author).to eq('Food Network Kitchens')
     end
 
   end

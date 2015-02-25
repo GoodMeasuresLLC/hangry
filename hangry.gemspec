@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.add_development_dependency('rake')
-  gem.add_development_dependency('rspec')
+  gem.add_development_dependency('rspec', '>= 3.0')
   gem.add_development_dependency('pry')
   gem.add_dependency('activesupport', '>= 3.0')
   gem.add_dependency('iso8601', '>= 0.4.0')
