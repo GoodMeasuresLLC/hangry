@@ -5,10 +5,10 @@ describe Hangry do
   context "standard food network recipe" do
     subject { Hangry.parse(File.read("spec/fixtures/schema_org/food_network_schema_org.html")) }
     
-    its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe/index.html' }
+    its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html' }
     its(:cook_time) { should == 20 }
     its(:description) { should == nil }
-    its(:image_url) { should == 'http://img.foodnetwork.com/FOOD/2008/08/13/av-rachael-ray.jpg' }
+    its(:image_url) { should == 'http://foodnetwork.sndimg.com/content/dam/images/food/unsized/Rachel_Ray.jpg.rend.sni2col.jpeg' }
     its(:ingredients) do
       should == [
         "4 boneless, skinless chicken breasts, 6 ounces",
@@ -43,7 +43,7 @@ Place a mound of stuffing on each breast and wrap and roll breast over the stuff
 
     its(:name) { should == "Spinach and Mushroom Stuffed Chicken Breasts" }
     its(:prep_time) { should == 15 }
-    its(:published_date) { should == Date.parse("2013-02-06") }
+    its(:published_date) { should == Date.parse("2014-12-16") }
     its(:total_time) { should == 35 }
     its(:yield) { should == "4 servings" }
 
@@ -56,10 +56,10 @@ Place a mound of stuffing on each breast and wrap and roll breast over the stuff
   context "food network recipe with some blank ingredients" do
     subject { Hangry.parse(File.read("spec/fixtures/schema_org/food_network_with_blank_ingredients.html")) }
 
-    its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/food-network-kitchens/easter-bunny-cake-recipe/index.html' }
+    its(:canonical_url) { should == 'http://www.foodnetwork.com/recipes/food-network-kitchens/easter-bunny-cake-recipe.html' }
     its(:cook_time) { should == nil }
     its(:description) { should == nil }
-    its(:image_url) { should == "http://img.foodnetwork.com/FOOD/2013/03/06/FN_kitchens-logo-avatar_s48x48.jpg" }
+    its(:image_url) { should == "http://foodnetwork.sndimg.com/content/dam/images/food/unsized/2013/11/25/0/FN-Avatar-FN-Logo-126x126.png.rend.sni2col.png" }
     its(:ingredients) do
       should == [
         "3 sticks (12 ounces) unsalted butter, at room temperature",
@@ -103,7 +103,7 @@ Make sure your cakes are completely cooled before you being to ice and cut them.
 
     its(:name) { should == "Easter Bunny Cake" }
     its(:prep_time) { should == 60 }
-    its(:published_date) { should == Date.parse("2013-04-01") }
+    its(:published_date) { should == Date.parse("2014-12-16") }
     its(:total_time) { should == 60 }
     its(:yield) { should == "12 to 14 servings" }
 
