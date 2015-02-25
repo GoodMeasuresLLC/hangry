@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
@@ -12,7 +13,7 @@ describe Hangry do
     end
     
     its(:author) { should == nil }
-    its(:canonical_url) { should == 'http://www.tasteofhome.com/Recipes/Rhubarb-Popover-Pie' }
+    its(:canonical_url) { should == 'http://www.tasteofhome.com/recipes/rhubarb-popover-pie' }
     its(:cook_time) { should == 20 }
     its(:description) { should == nil }
     its(:image_url) { should == "//hostedmedia.reimanpub.com/TOH/Images/Photos/37/exps49051_HCA1864839B02_17_3bC.jpg" }
