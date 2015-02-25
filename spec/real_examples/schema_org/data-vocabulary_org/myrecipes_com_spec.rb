@@ -30,7 +30,7 @@ Bake at 350° for 25 to 30 minutes or until a wooden pick inserted in center com
     end
     it "should have nil nutrition attributes" do
       subject.nutrition.each do |attribute, value|
-        value.should be_nil
+        expect(value).to be_nil
       end
     end
     its(:name) { should == "Best Carrot Cake" }

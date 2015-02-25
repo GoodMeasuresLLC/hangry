@@ -8,7 +8,7 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     it "should use the correct parser" do
-      Hangry::ParserClassSelecter.new(html).parser_class.should == Hangry::Parsers::NonStandard::EatingWellParser
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::EatingWellParser)
     end
 
     its(:author) { should == "From EatingWell" }
