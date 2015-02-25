@@ -7,7 +7,7 @@ describe Hangry do
     let(:html) { File.read("spec/fixtures/hrecipe/cooking.com.html") }
     subject { Hangry.parse(html) }
 
-    its(:author) { should == "Casual Cuisines of the World - Taverna" }
+    its(:author) { should == nil }
     its(:canonical_url) { should == "http://www.cooking.com/recipes-and-more/recipes/garlic-shrimp-recipe-41.aspx" }
     its(:cook_time) { should == nil }
     its(:description) { should == "In Spanish tavernas, these shrimp; fragrant with garlic and olive oil; are brought to the table sizzling in a little metal pan. Have plenty of bread on hand to sop up the delicious pan juices. Serve with lemon wedges, if desired." }
