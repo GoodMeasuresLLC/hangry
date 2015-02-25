@@ -8,10 +8,10 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     its(:author) { should == nil }
-    its(:canonical_url) { should == nil }
-    its(:cook_time) { should == nil }
-    its(:description) { should == nil }
-    its(:image_url) { should == "http://cf2.primecp.com/master_images/MrFood/Saucy-Italian-Pot-Roast-RE.jpg" }
+    its(:canonical_url) { should == "http://www.mrfood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268" }
+    its(:cook_time) { should == 320 }
+    its(:description) { should == "Try this saucy pot roast over egg noodles, rice, or-for more authentic Italian flavor-polenta. It's a winner whichever way you choose!" }
+    its(:image_url) { should == "http://cf2.primecp.com/images/article_images_v2/82166/Saucy-Italian-Pot-Roast-OR.jpg" }
     its(:ingredients) {
       should == [
         "1 (8-ounce) package sliced fresh baby Portobello mushrooms",
@@ -47,7 +47,7 @@ describe Hangry do
     its(:prep_time) { should == nil }
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
-    its(:yield) { should == nil }
+    its(:yield) { should == 10 }
 
   end
 

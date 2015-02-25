@@ -9,9 +9,9 @@ describe Hangry do
 
     its(:author) { should == "Peggy Trowbridge Filippone, About.com Guide" }
     its(:canonical_url) { should == "http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm" }
-    its(:cook_time) { should == nil }
+    its(:cook_time) { should == 25 }
     its(:description) { should == "The combination of key limes and white chocolate is irresistable. Use this basic recipe for incredibly moist and delightfully tangy sweet muffins or cake." }
-    its(:image_url) { should == "http://0.tqn.com/d/homecooking/1/I/G/C/1/blmuff23.jpg" }
+    its(:image_url) { should == "http://f.tqn.com/y/homecooking/1/W/G/C/1/blmuff23.jpg" }
     its(:ingredients) {
       should == [
         "Cupcakes/Cake:",
@@ -68,7 +68,7 @@ White Chocolate Key Lime Muffins or Cake Recipe Photo © 2008 Peggy Trowbridge F
       should == instructions.strip
     }
 
-    its(:prep_time) { should == nil }
+    its(:prep_time) { should == 10 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 35 }
     its(:yield) { should == nil }

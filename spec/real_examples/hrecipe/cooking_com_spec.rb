@@ -8,10 +8,10 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     its(:author) { should == "Casual Cuisines of the World - Taverna" }
-    its(:canonical_url) { should == "http://www.cooking.com/Recipes-And-More/recipes/garlic-shrimp-recipe-41.aspx" }
+    its(:canonical_url) { should == "http://www.cooking.com/recipes-and-more/recipes/garlic-shrimp-recipe-41.aspx" }
     its(:cook_time) { should == nil }
     its(:description) { should == "In Spanish tavernas, these shrimp; fragrant with garlic and olive oil; are brought to the table sizzling in a little metal pan. Have plenty of bread on hand to sop up the delicious pan juices. Serve with lemon wedges, if desired." }
-    its(:image_url) { should == nil }
+    its(:image_url) { should == "http://target.scene7.com/is/image/Target/c_RC_837_rt_Garlic-Shrimp-RT" }
     its(:ingredients) {
       should == [
         "1/4 cup olive oil",

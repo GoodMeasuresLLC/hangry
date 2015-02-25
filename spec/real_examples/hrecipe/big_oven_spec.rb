@@ -7,13 +7,12 @@ describe Hangry do
     subject { Hangry.parse(File.read("spec/fixtures/hrecipe/bigoven.html")) }
     
     its(:author) do
-      # BigOven puts the author element outside of the hRecipe element...
-      should == nil
+      should == "StevesKitchen"
     end
-    its(:canonical_url) { should == "http://www.bigoven.com/recipe/178920/steves-fish-tacos" }
+    its(:canonical_url) { should == "http://www.bigoven.com/recipe/steves-fish-tacos/178920" }
     its(:cook_time) { should == nil }
-    its(:description) { should == "I had never tried fish tacos until my son, fresh out of boot camp, asked me to make them. I found a basic recipe, then adapted it from there, and now it's one of my favorite things to eat!" }
-    its(:image_url) { should == 'http://mda.bigoven.com/pics/rs/256/steves-fish-tacos-2.jpg' }
+    its(:description) { should == "I had never tried fish tacos until my son, fresh out of boot camp, asked me to make them. I found a basic recipe, then adapted it from there, and now it's one of my favorite things to eat! \"It means little that I think these are the best fish tacos ever. It's a whole different matter that my husband (a devoted fish-taco lover) thinks they're the best. He says the search is over--these are the ones. Thanks, Steve\" - Jankrische" }
+    its(:image_url) { should == 'http://images.bigoven.com/image/upload/t_recipe-256/steves-fish-tacos-2.jpg' }
     its(:ingredients) {
       should == [
         "1 package of tortillas ; small", "0.5 cup sour cream", "0.25 cup salsa ; favorite", "1 Salt", "1 Pepper",
@@ -57,7 +56,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!
       }
     }
     its(:prep_time) { should == nil }
-    its(:published_date) { should == nil }
+    its(:published_date) { should == Date.parse("2010-02-02") }
     its(:total_time) { should == 45 }
     its(:yield) { should == "6 Servings" }
 

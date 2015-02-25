@@ -8,10 +8,10 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     its(:author) { should == nil }
-    its(:canonical_url) { should == "http://www.campbellskitchen.com/recipes/recipedetails?recipeid=60821" }
+    its(:canonical_url) { should == "http://www.campbellskitchen.com/recipes/savory-white-beans-spinach-60821" }
     its(:cook_time) { should == 10 }
     its(:description) { should == "The beans are white, the greens are spinach...and the dish is delicious (and ready in 30 minutes)!" }
-    its(:image_url) { should == 'http://www.cscassets.com/recipes/large_cknew/large_60821.jpg' }
+    its(:image_url) { should == 'http://www.campbellskitchen.com/recipeimages/savory-white-beans-spinach-large-60821.jpg' }
     its(:ingredients) {
       should == [
         "1 tablespoon olive oil",
