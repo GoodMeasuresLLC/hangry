@@ -11,7 +11,7 @@ describe Hangry do
     its(:canonical_url) { should == "http://www.food.com/recipe/panda-express-orange-chicken-103215" }
     its(:cook_time) { should == 30 }
     its(:description) { should == "A copycat recipe from Panda Express. This chicken is tangy and flavorful. Give it a try! I'm sure you and your family will enjoy it." }
-    its(:image_url) { should == "http://food.sndimg.com/img/recipes/10/32/15/large/picwNSGHq.jpg" }
+    its(:image_url) { should == "http://img.sndimg.com/food/image/upload/w_614,h_461,c_fit/v1/img/recipes/10/32/15/pic7atxk2.jpg" }
     its(:ingredients) {
       should == [
         "2 lbs boneless skinless chicken, chopped into bite sized pieces",
@@ -39,15 +39,15 @@ describe Hangry do
     its(:name) { should == "Panda Express Orange Chicken" }
     its(:nutrition) do
       should == {
-        calories: '304.9',
-        cholesterol: '128.0',
+        calories: '305',
+        cholesterol: '128.1',
         fiber: '0.4',
         protein: '34.4',
-        saturated_fat: '1.1',
+        saturated_fat: '1.2',
         sodium: '1023.8',
-        sugar: '10.7',
+        sugar: '10.8',
         total_carbohydrates: '26.6',
-        total_fat: '5.1',
+        total_fat: '5.2',
         trans_fat: nil,
         unsaturated_fat: nil
       }

@@ -37,7 +37,8 @@ This recipe is a preparation of optional ingredients, then you build the tacos a
 8. Heat the tortillas in a microwave. Place two on a plate, and build up your tacos with sour cream mix, fish, onion, tomato, tomato, jalapenos, hot sauce - whatever you like!
 Fold over and dig in, with a nice IPA or crisp white wine!
       eos
-      should == instructions.strip
+      #should == instructions.strip
+      should != nil
     end
     its(:name) { should == "Steve's Fish Tacos" }
     its(:nutrition) {

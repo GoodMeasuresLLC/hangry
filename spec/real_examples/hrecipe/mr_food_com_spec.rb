@@ -42,12 +42,12 @@ describe Hangry do
       }
     end
 
-    its(:instructions) { should == "" }
+    its(:instructions) { should == "Place mushrooms and onion in a 6-quart slow cooker; add roast. Sprinkle roast evenly with sauce mix and crushed red pepper. Pour diced tomatoes and tomato sauce over roast.Cover and cook on HIGH setting 5 to 6 hours or until meat is very tender. Remove roast from slow cooker, and cut into large chunks; keep warm.Skim fat from juices in slow cooker; discard fat. Stir together cornstarch and water in a small bowl until smooth; add to juices in slow cooker, stirring until blended.Cover and cook on HIGH setting 20 to 30 more minutes or until mixture is thickened, stirring once. Add roast pieces back to slow cooker. Cover and cook until thoroughly heated." }
 
     its(:prep_time) { should == nil }
     its(:published_date) { should == nil }
     its(:total_time) { should == nil }
-    its(:yield) { should == 10 }
+    its(:yield) { should == "10" }
 
   end
 

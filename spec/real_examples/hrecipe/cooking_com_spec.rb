@@ -15,9 +15,9 @@ describe Hangry do
     its(:ingredients) {
       should == [
         "1/4 cup olive oil",
-        "4 large cloves garlic , finely minced",
+        "4 large cloves garlic, finely minced",
         "1 teaspoon red pepper flakes",
-        "1 pound medium shrimp , peeled and deveined",
+        "1 pound medium shrimp, peeled and deveined",
         "2 tablespoons fresh lemon juice",
         "2 tablespoons dry sherry",
         "1 teaspoon paprika",
@@ -43,7 +43,7 @@ describe Hangry do
 
     its(:instructions) {
       instructions = <<-EOS
-In a saute pan over medium heat, warm the olive oil. Add the garlic and red pepper flakes and saute for 1 minute. Raise the heat to high and add the shrimp, lemon juice, sherry and paprika. Stir well, then saute, stirring briskly, until the shrimp turn pink and curl slightly, about 3 minutes. Season to taste with salt and freshly ground black pepper and sprinkle with parsley. Serve hot.
+In a saute pan over medium heat, warm the olive oil. Add the garlic and red pepper flakes, and saute for 1 minute. Raise the heat to high and add the shrimp, lemon juice, sherry and paprika. Stir well, then saute, stirring briskly, until the shrimp turn pink and curl slightly, about 3 minutes. Season to taste with salt and freshly ground black pepper, and sprinkle with parsley. Serve hot.
       EOS
       should == instructions.strip
     }

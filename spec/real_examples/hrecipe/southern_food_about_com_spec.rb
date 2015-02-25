@@ -9,13 +9,13 @@ describe Hangry do
 
     its(:author) { should == "Diana Rattray, About.com Guide" }
     its(:canonical_url) { should == "http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm" }
-    its(:cook_time) { should == nil }
+    its(:cook_time) { should == 13 }
     its(:description) { should == "This kale recipe is nutritious and delicious, and it's very easy to prepare and cook. There's very little fat in the recipe, and it can be reduced even further by using nonstick cooking spray and a little broth to saute the onion. I used the Portuguese hot crushed red peppers (wet, from jar) in this dish, but feel free to use fresh minced hot peppers for heat. Take a look at the large picture of this kale recipe." }
-    its(:image_url) { should == "http://0.tqn.com/d/southernfood/1/I/r/Q/3/kale-saute-2.jpg" }
+    its(:image_url) { should == "http://f.tqn.com/y/southernfood/1/W/r/Q/3/kale-saute-2.jpg" }
     its(:ingredients) {
       should == [
-        "1 pound kale, large stems removed, chopped, cooked (or use frozen chopped kale)",
-        "2 teaspoons olive oil",
+        "1 pound kale, large stems removed, chopped, or use frozen chopped kale",
+        "2 teaspoons extra virgin olive oil",
         "1/2 cup finely chopped purple onion",
         "1 medium clove garlic, pressed",
         "1 or 2 hot peppers, minced, or 1 heaping tablespoon Portuguese crushed red peppers from a jar*",
@@ -53,7 +53,7 @@ Portuguese style wet crushed hot red peppers might be found in the ethnic or Spa
       should == instructions.strip
     }
 
-    its(:prep_time) { should == nil }
+    its(:prep_time) { should == 12 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 25 }
     its(:yield) { should == "Serves 4 to 6" }
