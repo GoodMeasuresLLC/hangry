@@ -103,7 +103,7 @@ Make sure your cakes are completely cooled before you being to ice and cut them.
 
     its(:name) { should == "Easter Bunny Cake" }
     its(:prep_time) { should == 60 }
-    its(:published_date) { should == Date.parse("2014-12-16") }
+    its(:published_date) { should == Date.parse("2014-12-17") }
     its(:total_time) { should == 60 }
     its(:yield) { should == "12 to 14 servings" }
 

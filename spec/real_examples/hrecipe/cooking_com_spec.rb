@@ -43,7 +43,7 @@ describe Hangry do
 
     its(:instructions) {
       instructions = <<-EOS
-In a saute pan over medium heat, warm the olive oil. Add the garlic and red pepper flakes, and saute for 1 minute. Raise the heat to high and add the shrimp, lemon juice, sherry and paprika. Stir well, then sauté, stirring briskly, until the shrimp turn pink and curl slightly, about 3 minutes. Season to taste with salt and freshly ground black pepper, and sprinkle with parsley. Serve hot.
+In a sauté pan over medium heat, warm the olive oil. Add the garlic and red pepper flakes, and sauté for 1 minute. Raise the heat to high and add the shrimp, lemon juice, sherry and paprika. Stir well, then sauté, stirring briskly, until the shrimp turn pink and curl slightly, about 3 minutes. Season to taste with salt and freshly ground black pepper, and sprinkle with parsley. Serve hot.
       EOS
       should == instructions.strip
     }
