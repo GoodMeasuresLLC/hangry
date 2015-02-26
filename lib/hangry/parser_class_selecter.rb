@@ -8,6 +8,7 @@ require 'hangry/parsers/non_standard/all_recipes_parser'
 require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
+require 'hangry/parsers/non_standard/epicurious_parser'
 require 'hangry/parsers/non_standard/food_network_parser'
 require 'hangry/parsers/non_standard/southern_food_parser'
 require 'hangry/parsers/non_standard/taste_of_home_parser'
@@ -25,6 +26,7 @@ module Hangry
         Parsers::NonStandard::BigOvenParser,
         Parsers::NonStandard::CopykatParser,
         Parsers::NonStandard::EatingWellParser,
+        Parsers::NonStandard::EpicuriousParser,
         Parsers::NonStandard::FoodNetworkParser,
         Parsers::NonStandard::SouthernFoodParser,
         Parsers::NonStandard::TasteOfHomeParser
