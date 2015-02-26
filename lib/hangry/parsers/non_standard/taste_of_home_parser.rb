@@ -3,24 +3,21 @@ module Hangry
     module NonStandard
       class TasteOfHomeParser < SchemaOrgRecipeParser
 
+        def self.root_selector
+          '[itemtype="http://schema.org/recipe"]'
+        end
+
         def self.can_parse?(html)
           canonical_url_matches_domain?(html, 'tasteofhome.com')
         end
 
-        #def nodes_with_class(klass)
-        #  super.reject { |node|
-        #    # Taste of Home has nested elements with the 'ingredient' class.
-        #    # So reject all nodes with a child that has the same class.
-        #    node.css(".#{klass}").any?
-        #  }
-        #end
-
         def parse_yield
-          #puts node_with_itemprop(:recipeyield).inspect
-          100
-          #value(node_with_itemprop(:recipeYield)['content']) ||
-          #value(node_with_itemprop(:recipeYield).content) ||
-          #NullObject.new
+          value(node_with_itemprop(:recipeyield).content)
+        end
+
+        def parse_instructions
+          # => rd_directions.rd_ingredient each
+          recipe_ast.css(".rd_directions").first.css(".rd_ingredient").map(&:content).join("\n")
         end
 
       end
