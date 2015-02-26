@@ -1,11 +1,16 @@
 # encoding: UTF-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
   context "homecooking.about.com recipe" do
     let(:html) { File.read("spec/fixtures/hrecipe/homecooking.about.com.html") }
     subject { Hangry.parse(html) }
+
+    it "should use the correct parser" do
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::SchemaOrgRecipeParser)
+    end
 
     its(:author) { should == "By Peggy Trowbridge Filippone" }
     its(:canonical_url) { should == "http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm" }
@@ -50,6 +55,7 @@ describe Hangry do
 
     its(:instructions) {
       instructions = <<-EOS
+Preparation
 For Muffins:
 Preheat oven to 350 degrees F (175 degrees C). Line standard-size muffin tin with foil liners.
 Blend the flour, baking powder, and salt together in a small bowl. Set aside.
