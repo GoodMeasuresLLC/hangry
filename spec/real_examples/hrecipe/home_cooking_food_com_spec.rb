@@ -9,13 +9,13 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::SchemaOrgRecipeParser)
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::HomeCookingParser)
     end
 
     its(:author) { should == "By Peggy Trowbridge Filippone" }
     its(:canonical_url) { should == "http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm" }
     its(:cook_time) { should == 25 }
-    its(:description) { should == "The combination of key limes and white chocolate is irresistable. Use this basic recipe for incredibly moist and delightfully tangy sweet muffins or cake." }
+    its(:description) { should == "User Rating The combination of key limes and white chocolate is irresistable. Use this basic recipe for incredibly moist and delightfully tangy sweet muffins or cake." }
     its(:image_url) { should == "http://f.tqn.com/y/homecooking/1/W/G/C/1/blmuff23.jpg" }
     its(:ingredients) {
       should == [
@@ -36,7 +36,7 @@ describe Hangry do
         "1/8 cup fresh key lime juice"
       ]
     }
-    its(:name) { should == "White Chocolate Key Lime Muffins or Cake Recipe" }
+    its(:name) { should == "White Chocolate Key Lime Muffins or Cake Recipe" }
     its(:nutrition) do
       should == {
         calories: nil,
