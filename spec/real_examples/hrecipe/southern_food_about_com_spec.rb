@@ -1,5 +1,6 @@
 # encoding: UTF-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
@@ -7,10 +8,14 @@ describe Hangry do
     let(:html) { File.read("spec/fixtures/hrecipe/southernfood.about.com.html") }
     subject { Hangry.parse(html) }
 
+    it "should use the correct parser" do
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::SouthernFoodParser)
+    end
+
     its(:author) { should == "By Diana Rattray" }
     its(:canonical_url) { should == "http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm" }
     its(:cook_time) { should == 13 }
-    its(:description) { should == "This kale recipe is nutritious and delicious, and it's very easy to prepare and cook. There's very little fat in the recipe, and it can be reduced even further by using nonstick cooking spray and a little broth to saute the onion. I used the Portuguese hot crushed red peppers (wet, from jar) in this dish, but feel free to use fresh minced hot peppers for heat. Take a look at the large picture of this kale recipe." }
+    its(:description) { should == "This kale recipe is nutritious and delicious, and it's very easy to prepare and cook. There's very little fat in the recipe, and it can be reduced even further by using nonstick cooking spray and a little broth to saute the onion. I used the Portuguese hot crushed red peppers (wet, from jar) in this dish, but feel free to use fresh minced hot peppers for heat.  " }
     its(:image_url) { should == "http://f.tqn.com/y/southernfood/1/W/r/Q/3/kale-saute-2.jpg" }
     its(:ingredients) {
       should == [
@@ -25,7 +30,7 @@ describe Hangry do
         "pepper, to taste"
       ]
     }
-    its(:name) { should == "Sautéed Kale" }
+    its(:name) { should == "Sautéed Kale" }
     its(:nutrition) do
       should == {
         calories: nil,
@@ -45,10 +50,10 @@ describe Hangry do
     its(:instructions) {
       instructions = <<-EOS
 To cook the kale, bring a pot of salted water to a boil. Add the chopped kale and boil for 10 to 15 minutes, or until stem portions are tender. Or, follow directions on the package if using frozen kale.
-Heat olive oil in a large skillet over medium heat; cook onion until just tender. Add the garlic and cook, stirring, for 1 minute. Add crushed red peppers, kale, and vinegar; cook, stirring, for 1 minute longer. Add chopped tomato, salt, and pepper; heat through.
-Serves 4 to 6.
-*
-Portuguese style wet crushed hot red peppers might be found in the ethnic or Spanish section. I found Pastene in my area, but if you can't find the crushed peppers, use any fresh hot chile pepper, finely chopped.
+Heat olive oil in a large skillet or sauté pan over medium heat; cook onion until just tender.
+Add the garlic and cook, stirring, for 1 minute.
+Add crushed red peppers, kale, and vinegar; cook, stirring, for 1 minute longer.
+Add chopped tomato, salt, and pepper; heat through.
       EOS
       should == instructions.strip
     }
