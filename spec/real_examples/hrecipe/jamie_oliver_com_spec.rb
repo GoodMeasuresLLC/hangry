@@ -1,11 +1,16 @@
 # encoding: UTF-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
   context "jamieoliver.com recipe" do
     let(:html) { File.read("spec/fixtures/hrecipe/jamieoliver.com.html") }
     subject { Hangry.parse(html) }
+
+    it "should use the correct parser" do
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::JamieOliverParser)
+    end
 
     its(:author) { should == "Jamie Oliver" }
     its(:canonical_url) { should == nil }
