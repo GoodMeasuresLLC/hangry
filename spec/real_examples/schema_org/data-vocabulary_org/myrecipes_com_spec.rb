@@ -1,10 +1,16 @@
 # encoding: utf-8
 require 'hangry'
+require 'rspec/its'
 
 describe Hangry do
 
   context "myrecipes.com recipe" do
-    subject { Hangry.parse(File.read("spec/fixtures/schema_org/data-vocabulary_org/myrecipes.com.html")) }
+    let(:html) { File.read("spec/fixtures/schema_org/data-vocabulary_org/myrecipes.com.html") }
+    subject { Hangry.parse(html) }
+
+    it "should use the correct parser" do
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::DataVocabularyRecipeParser)
+    end
     
     its(:author) { should == "Southern Living" }
     its(:canonical_url) { should == 'http://www.myrecipes.com/recipe/best-carrot-cake-10000000257583/' }
