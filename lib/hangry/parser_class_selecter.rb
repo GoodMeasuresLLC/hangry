@@ -7,6 +7,7 @@ require 'hangry/parsers/non_standard/all_recipes_parser'
 require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
+require 'hangry/parsers/non_standard/food_network_parser'
 require 'hangry/parsers/non_standard/taste_of_home_parser'
 
 module Hangry
@@ -22,6 +23,7 @@ module Hangry
         Parsers::NonStandard::BigOvenParser,
         Parsers::NonStandard::CopykatParser,
         Parsers::NonStandard::EatingWellParser,
+        Parsers::NonStandard::FoodNetworkParser,
         Parsers::NonStandard::TasteOfHomeParser
       ]
       parser_classes += [SchemaOrgRecipeParser, HRecipeParser, DataVocabularyRecipeParser]
