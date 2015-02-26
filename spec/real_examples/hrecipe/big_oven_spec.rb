@@ -10,7 +10,7 @@ describe Hangry do
     subject { Hangry.parse(html) }
 
     it "should use the correct parser" do
-      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::DataVocabularyRecipeParser)
+      expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::BigOvenParser)
     end
 
     its(:author) do
@@ -22,11 +22,11 @@ describe Hangry do
     its(:image_url) { should == 'http://images.bigoven.com/image/upload/t_recipe-256/steves-fish-tacos-2.jpg' }
     its(:ingredients) {
       should == [
-        "1 package of tortillas ; small", "0.5 cup sour cream", "0.25 cup salsa ; favorite", "1 Salt", "1 Pepper",
-        "1 pound Cod ; Flounder or Haddock work too", "1 egg", "2 tablespoons milk", "1 tablespoon Flour",
-        "1 tablespoon corn meal", "2 tablespoons of olive oil ; you could use peanut oil or butter also",
-        "2 limes ; fresh, you'll use the juice", "1 tablespoon cider vinegar", "1 red onion ; small; diced",
-        "1 tomato ; diced", "2 cups red cabbage ; shredded", "cilantro ; chopped fine; optional", "Jalapenos ; optional",
+        "1 package of tortillas; small", "0.5 cup sour cream", "0.25 cup salsa; favorite", "1 Salt", "1 Pepper",
+        "1 pound Cod; Flounder or Haddock work too", "1 egg", "2 tablespoons milk", "1 tablespoon Flour",
+        "1 tablespoon corn meal", "2 tablespoons of olive oil; you could use peanut oil or butter also",
+        "2 limes; fresh, you'll use the juice", "1 tablespoon cider vinegar", "1 red onion; small; diced",
+        "1 tomato; diced", "2 cups red cabbage; shredded", "cilantro; chopped fine; optional", "Jalapenos; optional",
         "Seasoning mix", "1 Ground Cumin", "1 Ground Coriander", "Hot sauce"
       ]
     }
