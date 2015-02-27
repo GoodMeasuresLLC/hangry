@@ -40,6 +40,7 @@ module Hangry
   Recipe = Struct.new(*RECIPE_ATTRIBUTES)
 
   def self.parse(html)
+    html.encode!("UTF-8", :invalid => :replace)
     parser_class = ParserClassSelecter.new(html).parser_class
     recipe = parser_class.new(html).parse
     RecipeAttributeCleaner.new(recipe).clean
