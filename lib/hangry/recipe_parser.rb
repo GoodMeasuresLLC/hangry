@@ -33,6 +33,10 @@ module Hangry
       CanonicalUrlParser.new(html).canonical_domain == domain
     end
 
+    def self.canonical_url_contains_path?(html, path_part)
+      CanonicalUrlParser.new(html).canonical_url.include?(path_part)
+    end
+
     private
 
     class NullObject

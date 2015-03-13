@@ -9,6 +9,7 @@ require 'hangry/parsers/non_standard/bigoven_parser'
 require 'hangry/parsers/non_standard/copykat_parser'
 require 'hangry/parsers/non_standard/eating_well_parser'
 require 'hangry/parsers/non_standard/epicurious_parser'
+require 'hangry/parsers/non_standard/epicurious2_parser'
 require 'hangry/parsers/non_standard/food_network_parser'
 require 'hangry/parsers/non_standard/home_cooking_parser'
 require 'hangry/parsers/non_standard/jamie_oliver_parser'
@@ -29,6 +30,7 @@ module Hangry
         Parsers::NonStandard::CopykatParser,
         Parsers::NonStandard::EatingWellParser,
         Parsers::NonStandard::EpicuriousParser,
+        Parsers::NonStandard::Epicurious2Parser,
         Parsers::NonStandard::FoodNetworkParser,
         Parsers::NonStandard::HomeCookingParser,
         Parsers::NonStandard::JamieOliverParser,
