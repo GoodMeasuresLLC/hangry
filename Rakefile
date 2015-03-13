@@ -34,6 +34,7 @@ task :update_fixtures do
     ['http://www.cooks.com/recipe/oc0mk7z3/lemon-bars-deluxe.html', 'spec/fixtures/hrecipe/cooks.com.html'],
     ['http://www.drinksmixer.com/drink2438.html', 'spec/fixtures/hrecipe/drinksmixer.com.html'],
     ['http://www.epicurious.com/recipes/food/views/grilled-turkey-burgers-with-cheddar-and-smoky-aioli-354289', 'spec/fixtures/hrecipe/epicurious.html'],
+    ['http://www.epicurious.com/recipes/member/views/curry-goat-50118923','spec/fixtures/hrecipe/epicurious2.html'],
     ['http://www.grouprecipes.com/135867/deep-dark-chocolate-cheesecake.html', 'spec/fixtures/hrecipe/grouprecipes.com.html'],
     ['http://homecooking.about.com/od/muffinrecipes/r/blmuff23.htm', 'spec/fixtures/hrecipe/homecooking.about.com.html'],
     ['http://www.jamieoliver.com/recipes/pork-recipes/neck-fillet-steak/', 'spec/fixtures/hrecipe/jamieoliver.com.html'],

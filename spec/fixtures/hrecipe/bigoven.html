@@ -41,7 +41,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />        <meta name="apple-mobile-web-app-title" content="BigOven">
         <link href="/bundles/jqueryuicss?v=aqwjO9kkiT3Le7TMaiT918kKDlAh1vkDNEDOHv0LKgw1" rel="stylesheet"/>
 
-        <link href="/content/bootstrap?v=k1T02IiWxVRqqt04j8V6l2taJZNPJPo-AEXp9881gr01" rel="stylesheet"/>
+        <link href="/content/bootstrap?v=JPRtBYCyUrObO9MUGEOjW50qLX57csPy4XXaRlsvV_g1" rel="stylesheet"/>
 
         <script src="/bundles/jquery?v=M6dmVkrHVhoZ1gfOtvVDZbgBcQTsbWxoLsRizcGkbPk1"></script>
 
@@ -49,7 +49,7 @@
 
         <script src="/bundles/jqueryui?v=tY6OgGCT75o444y61QS1O4aw53gZZEMxEShWnQ-YqdI1"></script>
 
-        <script src="/bundles/bigoven?v=4qWWEQHV6_bO5Z1cA4W48VM59dYKmtno19NLf-aW9MA1"></script>
+        <script src="/bundles/bigoven?v=LoLgBknVrNoqxlG7cXW2mkd0b5PAybbKAsuCV40sxaE1"></script>
 
         <script type="text/javascript" src="/scripts/helpers/jquery.fancybox-media.js"></script>
         
@@ -643,7 +643,7 @@ label {margin-left:5px;vertical-align:middle;}
                             
                     <div id="detailedStats" style="display:none;">
                         <p>
-                            646 people want to try | 660 have favorited
+                            654 people want to try | 665 have favorited
                         </p>
                     </div>
                 </div>
@@ -1195,7 +1195,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</p></div>
                             <h3>Learn more</h3>
                                 <span style="margin-right:1em;"><a href="/article/recipe/fish"> <div class="mini-tile-full"><img class="mini-tile-img" src="http://www.bigoven.com/uploads/sq/64/fish-fillets.jpg"><div class="mini-tile-text"><p>Fish</p></div></div></a></span>
                                 <span style="margin-right:1em;"><a href="/article/recipe/taco-seasoning"> <div class="mini-tile-full"><img class="mini-tile-img" src="http://www.bigoven.com/uploads/sq/64/tacoseasoning.jpg"><div class="mini-tile-text"><p>Taco Seasoning</p></div></div></a></span>
-                                <span style="margin-right:1em;"><a href="/article/recipe/dressed-fish"> <div class="mini-tile-full"><img class="mini-tile-img" src="http://www.bigoven.com/uploads/sq/64/anything.jpg"><div class="mini-tile-text"><p>Dressed Fish</p></div></div></a></span>
+                                <span style="margin-right:1em;"><a href="/article/recipe/drawn-fish"> <div class="mini-tile-full"><img class="mini-tile-img" src="http://www.bigoven.com/uploads/sq/64/anything.jpg"><div class="mini-tile-text"><p>Drawn Fish</p></div></div></a></span>
                         </div>
 
 
@@ -1397,7 +1397,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</p></div>
                             <a style="font-size: 0.9em;" href="/user/kculica">
                                 kculica
                             </a> <span style="font-size: 0.9em;">
-2 months  ago                                 </span>
+3 months  ago                                 </span>
                         </blockquote>
                         <!-- replies -->
 
@@ -1415,7 +1415,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!</p></div>
                             <a style="font-size: 0.9em;" href="/user/Elaines70">
                                 Elaines70
                             </a> <span style="font-size: 0.9em;">
-2 months  ago                                 </span>
+3 months  ago                                 </span>
                         </blockquote>
                         <!-- replies -->
 
@@ -1560,7 +1560,7 @@ They were a keeper request by my husband &amp; I&#39;m making it again tonight!!
                             <a style="font-size: 0.9em;" href="/user/tanilaprice">
                                 tanilaprice
                             </a> <span style="font-size: 0.9em;">
-2 years  ago                                 </span>
+3 years  ago                                 </span>
                         </blockquote>
                         <!-- replies -->
 
@@ -1933,7 +1933,7 @@ They were a keeper request by my husband &amp; I&#39;m making it again tonight!!
         setMakeItText();
         setTimeout(function() {
             suggestMake();
-        }, 10000);
+        }, 50000);
 
         $('.vimeo').fancybox({
             helpers: {
@@ -1981,7 +1981,7 @@ They were a keeper request by my husband &amp; I&#39;m making it again tonight!!
         
             
         $("#noteDate").datepicker();
-        $("#noteDate").val('2/25/2015');
+        $("#noteDate").val('3/13/2015');
 
         $("#submitreview").click(function (e) {
             var myRating = parseInt( $("input[name='star-rating']").val());
@@ -2108,6 +2108,31 @@ They were a keeper request by my husband &amp; I&#39;m making it again tonight!!
             </div>
             <!-- /.modal-dialog -->
         </div>
+        
+        <div id="shareOnFacebook" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close modalProceed" onclick="cancelFBPrompt(); " aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <span>Share your discoveries on Facebook</span>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="clear:both;padding:1em 2em 0em 2em;">
+                            <p>Glad you've found something to try! Let BigOven share your recipe discoveries on Facebook. Click "Okay" on the Facebook prompt.</p>
+                            <p>
+                                <a class="btn btn-primary btnstateless modalProceed">Got it</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
         <!-- /.modal -->
 
                     <div class="hidden-xs">

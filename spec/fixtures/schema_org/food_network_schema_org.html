@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html" />
 
     
-<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcOUlRQGwEGVlJQBwg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:22,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1);t("loader").features.stn=!0,t(2),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:8,2:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,2:23,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:23,2:22,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:23,2:22,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:23,2:22,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:23,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],12:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:21,2:22,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:21,2:12,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],21:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],22:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],23:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:22,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],G9z0Bl:[function(n,e){function t(){var n=h.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(l,function(e,t){e in n||(n[e]=t)}),h.proto="https"===d.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=h.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",d=(""+location).split("?")[0],l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},h=e.exports={offset:i(),origin:d,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
 	
 	
 
@@ -53,9 +53,7 @@
 
     <meta name="tp:PreferredRuntimes" content="Flash,HTML5" />
 
-
   <link rel="stylesheet" type="text/css" href="http://images.foodnetwork.com/webfood/community/prod/css/fn-community.css">
-
 
     <script type='text/javascript'>
         var crtg_nid = '3261';
@@ -139,12 +137,10 @@
 	</script>
 
 
-
 	<script type="text/javascript" src="http://dje7rr2pnbe7f.cloudfront.net/public/j/food-network/box-loader.js"></script>
   <!--pagetype: recipe-->
   
 	<script id="fn-community-init" type="text/javascript" src="http://images.foodnetwork.com/webfood/community/prod/js/fn-community-init.js" inclmustache="false" webloginui="true" communityapikey="3_ClDcX23A7tU8pcydnKyENXSYP5kxCbwH4ZO741ZOujPRY8Ksj2UBnj8Zopb0OX0K" moderateuserprofileurl="https://api.food.com/external/web/fn/moderateUserProfile" inclsocialupload="false" moderatecommenturl="https://api.food.com/external/web/fn/moderateComment" socialuploadurl="http://statics.scrippsnetworks.com/wrapper/js/socialupload_widget.js" socialuploadapikey="AsMMFcUZiTt2VBZByq8htz"></script>
-
     
 
 
@@ -163,63 +159,10 @@
     <link href="https://plus.google.com/100091697767366769792" rel="publisher"/>
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-//The asset section will be populated in sni-metadata.js
-if( typeof(SNI_COMMUNITY_ECHO_ASSET)=='undefined' ){
-	SNI_COMMUNITY_ECHO_ASSET = {};
-}
-if( typeof(SNI_COMMUNITY_COMMENT_APP)=='undefined' ){
-	SNI_COMMUNITY_COMMENT_APP = {};
-}
-
-SNI_COMMUNITY_COMMENT_APP.AVERAGE_RATING_TARGET = ".community-average-rating";  //target name for div populated by Echo
-SNI_COMMUNITY_COMMENT_APP.SANITIZATION= ""; //Default value is empty
-SNI_COMMUNITY_COMMENT_APP.EDITOR_MAX_LIMIT= "1000"; // Default value is 1000
-SNI_COMMUNITY_COMMENT_APP.SORT_ORDER= "reverseChronological"; // Default value is "reverseChronological" ; Available sort order options "reverseChronological", "chronological", "repliesDescending", "likesDescending", "flagsDescending"
-SNI_COMMUNITY_COMMENT_APP.ITEMS_PER_PAGE= 10; // Default value is 10
-SNI_COMMUNITY_COMMENT_APP.CHILD_ITEMS_PER_PAGE= 2; //Default value is 2
-SNI_COMMUNITY_COMMENT_APP.CSS_DEFAULT = "/css/food/custom-reviews.css"; //Default value is "/css/food/custom-reviews.css"
-SNI_COMMUNITY_COMMENT_APP.SHOW_LIKE = true; // Boolean; default value is true
-SNI_COMMUNITY_COMMENT_APP.SHOW_SHARE = true; // Boolean; default value is true
-SNI_COMMUNITY_COMMENT_APP.SHOW_REPLY = true; // Boolean; default value is true
-SNI_COMMUNITY_COMMENT_APP.SHOW_FLAG = false; // Boolean; default value is true
-SNI_COMMUNITY_COMMENT_APP.SHOW_DELETE = false; // Boolean; default value is true
-SNI_COMMUNITY_COMMENT_APP.REQUIRE_APPROVAL = true; // Boolean; TBD and default value is true
-
-SNI_COMMUNITY_COMMENT_APP.COLORCODE_ROLES_MATCH = {Chef:'#efece3'};
-SNI_COMMUNITY_COMMENT_APP.ICON_ROLES_MATCH = {Chef:'http://my.foodnetwork.com/skins/main/images/fnmobi/mb-hd-logo.png',iron_chef:'http://my.foodnetwork.com/skins/main/images/fnmobi/check.png'};
-
-//vars set by community platform scripts; can be used in rendering page.
-SNI_COMMUNITY_COMMENT_APP.TOTAL_NUM_REVIEWS = "";
-SNI_COMMUNITY_COMMENT_APP.RATING_CUMULATIVE = "";
-SNI_COMMUNITY_COMMENT_APP.AVERAGE_RATING = "";
-
-//setting asset URL to include full host, etc
-SNI_COMMUNITY_ECHO_ASSET.ASSET_URL = document.URL;
-
-</script>
 <script type="text/javascript">
     if (typeof MetaDataManager != "undefined") {
     	var mdManager = new MetaDataManager();
-        var mdProps = {"Site":"food","Section":"recipes","ContentTag1":"chicken","HubID":"273f83bb-4250-4128-b526-a29c730c1e57","AdKey1":"chicken","HubPath":"/content/food/recipes/rachael-ray/s/sp/spi/spin/spinach-and-mushroom-stuffed-chicken-breasts-recipe","SctnDspName":"recipes &amp; how-tos","Delivery_Channel":"web","HubType":"recipe","Sponsorship":"MAKEIT5WAYSCHICKEN","Technique":"saute,peel-garlic","Difficulty":"intermediate","ImgURL":"http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/4/19/1/FN_chicken-breasts-006_s4x3.jpg","Restricted":"false","FastFwdID":"22172","Source":"manual","AllTags":"main-dish,ricotta,dinner,mushroom,lunch,chicken,spinach","MainIngredient":"ricotta,spinach,mushroom,chicken,chicken","ContentTag2":"spinach","CategoryDspName":"recipes &amp; how-tos","Type":"recipe","HubSponsor":"makeit5wayschicken","MealPart":"dinner,lunch,main-dish","Title":"spinach and mushroom stuffed chicken breasts","PublishTime":"2014-12-16T01:08:06Z","MealType":"dinner,lunch","PackageName":"make it 5 ways: chicken breast","Url":"/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html","CanonicalUrl":"http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html","CrosslinkTerms":";spinach,;mushrooms,;food processor,;pulse,;stuffing,;whisk,;simmer,;chicken breasts,;butter,;cloves garlic,;shallot,;skim,;romano,;nutmeg,;extra-virgin olive oil,;sauce,;chicken broth","Cuisine":"american-general","DetailId":"273f83bb-4250-4128-b526-a29c730c1e57","PageNumber":"1","Classification":"recipes, food","UniqueID":"food|recipe|273f83bb-4250-4128-b526-a29c730c1e57|1","talentName":"rachael ray","PrepTime":"15"};
+        var mdProps = {"Section":"recipes","AllTags":"main-dish,ricotta,dinner,mushroom,lunch,chicken,spinach","CategoryDspName":"recipes &amp; how-tos","Title":"spinach and mushroom stuffed chicken breasts","CrosslinkTerms":";spinach,;mushrooms,;food processor,;pulse,;stuffing,;whisk,;simmer,;chicken breasts,;butter,;cloves garlic,;shallot,;skim,;romano,;nutmeg,;extra-virgin olive oil,;sauce,;chicken broth","MainIngredient":"ricotta,spinach,mushroom,chicken,chicken","HubType":"recipe","HubSponsor":"makeit5wayschicken","ImgURL":"http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/4/19/1/FN_chicken-breasts-006_s4x3.jpg","Restricted":"false","Delivery_Channel":"web","Cuisine":"american-general","Site":"food","UniqueID":"food|recipe|273f83bb-4250-4128-b526-a29c730c1e57|1","SctnDspName":"recipes &amp; how-tos","Source":"manual","HubID":"273f83bb-4250-4128-b526-a29c730c1e57","FastFwdID":"22172","PageNumber":"1","PrepTime":"15","Classification":"recipes, food","PublishTime":"2014-12-16T01:08:06Z","AdKey1":"chicken","Url":"/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html","Sponsorship":"MAKEIT5WAYSCHICKEN","HubPath":"/content/food/recipes/rachael-ray/s/sp/spi/spin/spinach-and-mushroom-stuffed-chicken-breasts-recipe","Technique":"saute,peel-garlic","ContentTag2":"spinach","ContentTag1":"chicken","PackageName":"make it 5 ways: chicken breast","talentName":"rachael ray","MealPart":"dinner,lunch,main-dish","CanonicalUrl":"http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html","Difficulty":"intermediate","DetailId":"273f83bb-4250-4128-b526-a29c730c1e57","Type":"recipe","MealType":"dinner,lunch"};
     	for (var key in mdProps) {
             mdManager.addAttribute(key, mdProps[key]);
     	}
@@ -276,7 +219,7 @@ SNI_COMMUNITY_ECHO_ASSET.ASSET_URL = document.URL;
   "description": "",
   "sitesection": "recipes",
   "subsection": "rachael-ray",
-  "random": "0.04"
+  "random": "0.10"
 }, true);
 }
 
@@ -877,7 +820,7 @@ CQ_Analytics.Sitecatalyst.updateEvars = function(options) {
 if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
 //-->
 </script>
-<noscript><img src="http://sa.foodnetwork.com/b/ss/scrippsfoodnetnew/1/H.25--NS/1424871723014?cdp=2&amp;gn=content%3Afood%3Arecipes%3Arachael-ray%3As%3Asp%3Aspi%3Aspin%3Aspinach-and-mushroom-stuffed-chicken-breasts-recipe" height="1" width="1" border="0" alt=""/></noscript>
+<noscript><img src="http://sa.foodnetwork.com/b/ss/scrippsfoodnetnew/1/H.25--NS/1426254198659?cdp=2&amp;gn=content%3Afood%3Arecipes%3Arachael-ray%3As%3Asp%3Aspi%3Aspin%3Aspinach-and-mushroom-stuffed-chicken-breasts-recipe" height="1" width="1" border="0" alt=""/></noscript>
 <script type="text/javascript">
 <!--
 if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'))
@@ -911,9 +854,9 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 			<li>
 					<a href="/shows/chopped.html" class="ico-wrap"><img height="110" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/8/27/0/FN-ShowLogo-Chopped-1920x1080.jpg.rend.sni6col.wide.jpeg"/></a></li>
 			<li>
-					<a href="/shows/guys-grocery-games.html" class="ico-wrap"><img height="110" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/9/30/0/FN-ShowLogo-GuysGroceryGames-1920x1080-2.jpg.rend.sni6col.wide.jpeg"/></a></li>
+					<a href="/shows/food-fortunes.html" class="ico-wrap"><img height="110" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/unsized/2015/3/4/0/FN-ShowLogo-FoodFortunes-1920x1080.jpg.rend.sni6col.wide.jpeg"/></a></li>
 			<li>
-					<a href="/shows/duff-till-dawn.html" class="ico-wrap"><img height="110" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/unsized/2015/1/5/0/FN-ShowLogo-DuffTillDawn-1920x1080.jpg.rend.sni6col.wide.jpeg"/></a></li>
+					<a href="/shows/guys-grocery-games.html" class="ico-wrap"><img height="110" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/9/30/0/FN-ShowLogo-GuysGroceryGames-1920x1080-2.jpg.rend.sni6col.wide.jpeg"/></a></li>
 			</ul>
 </div></div>
 </div>
@@ -925,8 +868,8 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 				<li><a href="/shows/beat-bobby-flay.html">Beat Bobby Flay</a></li>
 				<li><a href="/shows/cutthroat-kitchen.html">Cutthroat Kitchen</a></li>
 				<li><a href="/shows/diners-drive-ins-and-dives.html">Diners, Drive-Ins and Dives</a></li>
+				<li><a href="/shows/duff-till-dawn.html">Duff Till Dawn</a></li>
 				<li><a href="/shows/giada-at-home.html">Giada at Home</a></li>
-				<li><a href="/shows/kids-baking-championship.html">Kids Baking Championship</a></li>
 				<li><a href="/shows/restaurant-impossible.html">Restaurant: Impossible</a></li>
 				<li><a href="/shows/the-kitchen.html">The Kitchen</a></li>
 				<li><a href="/shows/the-pioneer-woman.html">The Pioneer Woman</a></li>
@@ -969,14 +912,14 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 	<div class="col4 offset">
 		<div class="sub-mod-four-1 sub-mod-four"><div class="set">
         <h6><a href="/videos.html">Videos <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
-        <a href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233928.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/4/0/ST0100_mentors_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a></div>
+        <a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230084.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2014/1/10/0/BLITZ_Alex-Guarnaschelli-02_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a></div>
 <ul class="list">
-		<li><a class="video-link" href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233928.html">Star Chefs: Tough Answers About Competing</a></li>
+		<li><a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230084.html" class="video-link">Chopped Judges Take a Blowtorch to Dinner</a> <i class="ss-video"></i></li>
 		</ul>
 <b class="slug divider">Full Episodes</b>
 <ul class="list">
-		<li><a class="video-link" href="/videos/channels/diners-drive-ins-and-dives-full-episodes.html">Watch Triple D</a></li>
-		<li><a class="video-link" href="/shows/chopped/chopped-full-episodes.html">Watch Chopped</a></li>
+		<li><a class="video-link" href="/videos/channels/diners-drive-ins-and-dives-full-episodes.html">Watch Triple D</a> <i class="ss-video"></i></li>
+		<li><a class="video-link" href="/shows/chopped/chopped-full-episodes.html">Watch Chopped</a> <i class="ss-video"></i></li>
 		</ul>
 </div>
 </div>
@@ -985,13 +928,13 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 	<h6>Watch Full Episodes:</h6>
 	<ul class="inline">
 		<li>
-				<a class="video-link" href="/videos/players/food-network-full-episodes.870e03b6-47ba-4216-989e-689c35a08d48.0218760.html">Guy's Grocery Games</a></li>
+				<a class="video-link" href="/shows/all-star-academy/all-star-academy-videos.498cf647-154e-4846-8eb3-54fefb1f9d1c.0232512.html">All-Star Academy Premiere</a> <i class="ss-video"></i></li>
 		<li>
-				<a class="video-link" href="/videos/players/food-network-full-episodes.86f15367-8628-4fca-8c6e-f3a8e3f94198.0197759.html">Cupcake Wars</a></li>
+				<a class="video-link" href="/videos/players/food-network-full-episodes.eb27cfd6-7587-49df-a3f7-70c26ee14c69.0217561.html">The Kitchen</a> <i class="ss-video"></i></li>
 		<li>
-				<a class="video-link" href="/videos/players/food-network-full-episodes.70e1480f-60e8-4f0e-b816-c1519597f2d4.0215359.html">Cutthroat Kitchen</a></li>
+				<a class="video-link" href="/videos/players/food-network-full-episodes.a9bfac32-1c99-45f9-9052-8fc83d397c81.0217950.html">Diners, Drive-Ins and Dives</a> <i class="ss-video"></i></li>
 		<li class="last">
-				<a class="video-link" href="/videos/players/food-network-full-episodes.vc.html">More Full Episodes</a></li>
+				<a class="video-link" href="/videos/players/food-network-full-episodes.vc.html">More Full Episodes</a> <i class="ss-video"></i></li>
 		</ul>
 	<a href="/shows.html" class="btn vip last"><b>More Shows</b></a><a href="/shows/tv-schedule.html" class="btn first"><b>TV Schedule</b></a></div></div>
 </ul>
@@ -1001,21 +944,21 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 						<div class="module header"><span style="display: none" class="clicktracking" data-component-path="sni-food/components/util/header/chefs-mega-dropdown" data-resource-path="/content/food/regions/header/chefs-mega-dropdown/jcr:content/par/chefs-mega-dropdown" data-resource-type="sni-food/components/util/header/chefs-mega-dropdown"></span><div class="row">
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-1"><div class="set">
-		<a href="/chefs/guy-fieri.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/1/5/0/GK0400_Guy-Fieri-with-grocery-bag_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/chefs/guy-fieri.html"><h6>Guy Fieri</h6>
+		<a href="/chefs/bobby-flay.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/4/0/ST0100_Bobby-Flay_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/chefs/bobby-flay.html"><h6>Bobby Flay</h6>
                 </a><ul class="list">
-			<li><a class="gallery-link" href="/shows/guys-grocery-games/photos/guy-fieris-survival-guide-for-guys-grocery-games.html">Tips on How to Win GGG</a></li>
-			<li><a href="/shows/guys-grocery-games/guys-grocery-games-videos.2e4127aa-5152-4400-b122-b8f8991483d6.0221678.html" class="video-link">Flavortown By the Numbers</a></li>
+			<li><a class="video-link" href="/shows/all-star-academy/all-star-academy-videos.498cf647-154e-4846-8eb3-54fefb1f9d1c.0232512.html">Premiere: All-Star Academy</a> <i class="ss-video"></i></li>
+			<li><a class="gallery-link" href="/shows/all-star-academy/photos/meet-the-all-star-academy-teams.html">All-Star: Bobby's New Team</a> <i class="ss-layers"></i></li>
 			</ul>
 	</div>
 </div>
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-2"><div class="set">
-		<a href="/chefs/ted-allen.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/1/26/0/ST0101_Ted-Allen_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/chefs/ted-allen.html"><h6>Ted Allen</h6>
+		<a href="/chefs/guy-fieri.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/12/13/0/FN_Guy-Fieri-Diner-Kitchen_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/chefs/guy-fieri.html"><h6>Guy Fieri</h6>
                 </a><ul class="list">
-			<li><a href="http://blog.foodnetwork.com/fn-dish/2015/02/ted-allen-on-all-star-academy/">Ted Dishes About Star Chefs</a></li>
-			<li><a class="video-link" href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230094.html">After Hours: Bizarre Eats</a></li>
+			<li><a class="video-link" href="/shows/guys-grocery-games/guys-grocery-games-videos.0bda22aa-beed-4959-aa75-2735e9e5d9ab.0233376.html">Trick Question on GGG</a> <i class="ss-video"></i></li>
+			<li><a href="http://blog.foodnetwork.com/fn-dish/2015/03/photos-guy-fieri-makes-nachos-in-a-trashcan-and-theyre-amazing/">Guy's Nachos in a Trashcan</a></li>
 			</ul>
 	</div>
 </div>
@@ -1024,7 +967,7 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 	<ul>
 		<li>
 			<div>
-					<a href="/chefs/bobby-flay.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2012/10/30/1/FN_Bobby-Flay_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a><h6><a href="/chefs/bobby-flay.html">Bobby Flay</a></h6>
+					<a href="/chefs/ted-allen.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/4/0/ST0100_Ted-Allen_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a><h6><a href="/chefs/ted-allen.html">Ted Allen</a></h6>
 					</div>
 			<div>
 					<a href="/chefs/ree-drummond.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/12/15/0/WU0801_Ree-Drummond.jpg.rend.sni4col.landscape.jpeg"/></a><h6><a href="/chefs/ree-drummond.html">Ree Drummond</a></h6>
@@ -1058,7 +1001,7 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		<li><a href="/chefs/robert-irvine.html">Robert Irvine</a></li>
 		</ul>
 <ul class="list">
-		<li><a href="/chefs/valerie-bertinelli.html">Valerie Bertinelli</a></li>
+		<li><a href="/chefs/nancy-fuller.html">Nancy Fuller</a></li>
 		<li><a href="/chefs/damaris-phillips.html">Damaris Phillips</a></li>
 		<li><a href="/chefs/michael-symon.html">Michael Symon</a></li>
 		</ul>
@@ -1066,16 +1009,16 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 </div>
 </div>
 <div class="bottom">
-	<h6>What's New:</h6>
+	<h6>What's New</h6>
 	<ul class="inline">
 		<li>
-				<a href="/shows/chopped/chopped-at-home-challenge/main.html">Your Chopped Dish: Last Chance at $10,000</a></li>
+				<a href="/shows/chopped/chopped-at-home-challenge/main.html">Vote: The Best Chopped at Home Creations</a></li>
 		<li>
-				<a href="http://blog.foodnetwork.com/fn-dish/2015/02/quiz-which-all-star-academy-mentor-are-you/">Quiz: Which All-Star Academy Mentor Are You?</a></li>
+				<a class="video-link" href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230084.html">Chopped After Hours: A Torched Dessert</a> <i class="ss-video"></i></li>
 		<li class="last">
-				<a href="/shows/kids-baking-championship/photos/top-moments-of-kids-baking-championship.html" class="gallery-link">Exciting Moments from the Kids Baking Finale</a></li>
+				<a href="http://blog.foodnetwork.com/fn-dish/2015/03/cooking-advice-from-the-all-star-academy-mentors/">5 Non-Negotiable Cooking Rules</a></li>
 		</ul>
-	<a href="/chefs.html" class="btn vip last"><b>More Chefs & Hosts</b></a></div></div>
+	</div></div>
 </ul>
 					</li>
 				<li class="recipes">
@@ -1083,25 +1026,25 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 						<div class="module header"><span style="display: none" class="clicktracking" data-component-path="sni-food/components/util/header/recipes-mega-dropdown" data-resource-path="/content/food/regions/header/recipes-mega-dropdown/jcr:content/par/recipes-mega-dropdown" data-resource-type="sni-food/components/util/header/recipes-mega-dropdown"></span><div class="row">
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-1"><div class="set">
-		<a href="/recipes/photos/cold-weather-weeknight-dinners.page-12.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2009/6/12/0/FO1D41_23785_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/recipes/photos/cold-weather-weeknight-dinners.page-12.html"><h6>Cold-Weather Dinners</h6>
+		<a href="/recipes/photos/spring-weeknight-dinners.page-23.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/9/1/1/RE1006H_ground-chicken-tacos-with-creamy-salsa_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/recipes/photos/spring-weeknight-dinners.page-23.html"><h6>Weeknight Dinner Ideas</h6>
                 </a><ul class="list">
-			<li><a class="gallery-link" href="/recipes/photos/cold-weather-weeknight-dinners.page-12.html">Winter Weeknight Mains</a></li>
-			<li><a class="gallery-link" href="/recipes/photos/easy-winter-side-dish-recipes.html">Simple Side Dishes</a></li>
-			<li><a class="gallery-link" href="/recipes/photos/winter-desserts-from-the-pantry.html">Desserts from the Pantry</a> &nbsp;</li>
-			<li><a class="gallery-link" href="/recipes/photos/30-minute-dinner-recipes.html">30-Minute Dinners</a></li>
+			<li><a href="/recipes/photos/spring-weeknight-dinners.page-23.html" class="gallery-link">Easy Spring Dinners</a> <i class="ss-layers"></i></li>
+			<li><a class="gallery-link" href="/recipes/packages/recipes-for-kids/kids-weeknight-dinners.html">Family-Friendly Mains</a> <i class="ss-layers"></i></li>
+			<li><a href="/recipes/photos/30-minute-dinner-recipes.html" class="gallery-link">30-Minute Meals</a> <i class="ss-layers"></i>  &nbsp;</li>
+			<li><a href="/recipes/photos/easy-breakfast-for-dinner-recipes.html" class="gallery-link">Breakfast for Dinner</a> <i class="ss-layers"></i></li>
 			</ul>
 	</div>
 </div>
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-2"><div class="set">
-		<a href="/recipes/packages/comfort-foods/easy-comfort-food-recipes/easy-comfort-food-recipes.page-13.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/2/8/0/ED0312H_smoked-party-meatloaf-recipe_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/recipes/packages/comfort-foods/easy-comfort-food-recipes/easy-comfort-food-recipes.page-13.html"><h6>Easy Comfort Foods</h6>
+		<a href="/recipes/packages/comfort-foods/easy-one-pot-meals/our-best-one-pot-meals.page-35.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2003/11/18/0/ei1b02_chicken_stew.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/recipes/packages/comfort-foods/easy-one-pot-meals/our-best-one-pot-meals.page-35.html"><h6>Comfort Food Classics</h6>
                 </a><ul class="list">
-			<li><a href="/recipes/packages/comfort-foods/easy-comfort-food-recipes/easy-comfort-food-recipes.page-13.html" class="gallery-link">Easy-to-Make Comfort Food</a></li>
-			<li><a class="gallery-link" href="/recipes/food-network-kitchens/buffalo-style-chicken-wings-recipe/how-to-make-buffalo-style-chicken-wings.html">Buffalo Wing How-To</a></li>
-			<li><a href="/recipes/photos/sunnys-easy-comfort-food-favorites.html" class="gallery-link">Sunny's Comfort Favorites</a>  &nbsp;</li>
-			<li><a href="/recipes/photos/diner-salads.html" class="gallery-link">Diner-Style Salads</a></li>
+			<li><a href="/recipes/packages/comfort-foods/easy-one-pot-meals/our-best-one-pot-meals.page-35.html" class="gallery-link">Our Best One-Pot Meals</a> <i class="ss-layers"></i></li>
+			<li><a href="/recipes/photos/comforting-casserole-recipes.html" class="gallery-link">Comforting Casseroles</a> <i class="ss-layers"></i></li>
+			<li><a href="/recipes/packages/comfort-foods/easy-comfort-food-recipes/easy-comfort-food-recipes.html" class="gallery-link">Easy-to-Make Mains</a> <i class="ss-layers"></i>  &nbsp;</li>
+			<li><a href="/recipes/packages/comfort-foods/easy-comfort-food-recipes/comfort-food-for-breakfast.html" class="gallery-link">Comfort Food Breakfasts</a> <i class="ss-layers"></i></li>
 			</ul>
 	</div>
 </div>
@@ -1109,17 +1052,17 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		<div class="sub-mod-six-3 sub-mod-six"><div class="set">
 		<h6><a href="/healthy.html">Healthy Eating <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
 		<ul class="list">
+				<li><a href="/healthy/packages/healthy-every-week/quick-and-simple.html">Quick and Simple Recipes</a></li>
 				<li><a href="/healthy/packages/healthy-every-week/healthy-tips.html">Tips for Healthy Living</a></li>
 				<li><a href="/healthy/packages/healthy-every-week/healthy-on-the-road.html">Healthy Eats On the Road</a></li>
-				<li><a href="/healthy/packages/healthy-every-week/quick-and-simple.html">Quick and Simple Recipes</a></li>
 				</ul>
 		</div>
 <div class="set">
 		<h6><a href="/holidays-and-parties.html">Holidays &amp; Parties <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
 		<ul class="list">
-				<li><a href="/recipes/packages/recipes-for-kids/weekends-at-home.html">Fun Family Weekends</a></li>
-				<li><a href="/recipes/packages/fan-favorite-recipes.html">Food Network Fan Favorites</a></li>
 				<li><a href="/holidays-and-parties/packages/st-patricks-day.html">St. Patrick's Day Recipes</a></li>
+				<li><a href="/holidays-and-parties/packages/spring-entertaining-guide.html">Spring Entertaining Guide</a></li>
+				<li><a href="/holidays-and-parties/packages/easter.html">Easter Favorites</a></li>
 				</ul>
 		</div>
 </div>
@@ -1129,30 +1072,30 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		<h6><a href="/recipes.html">What's Cooking <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
 		<ul class="list">
 				<li><a href="/recipes/packages/breakfast.html">Our Best Breakfast Recipes</a></li>
+				<li><a href="/recipes/packages/recipes-for-kids/weekends-at-home.html">Family-Friendly Meals</a></li>
+				<li><a href="/recipes/packages/off-the-menu.html">Restaurant Recipes at Home</a></li>
 				<li><a href="/recipes/packages/sandwich-central.html">Sandwich Central</a></li>
-				<li><a href="/recipes/packages/make-it-5-ways-sausage.html">Top Sausage Recipes</a></li>
-				<li><a href="/recipes/packages/love-your-kitchen.html">Shortcut Dinners</a></li>
 				</ul>
 		</div>
 <div class="set">
 		<h6><a href="/how-to/packages/help-around-the-kitchen.html">Around the Kitchen <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a>  &nbsp;</h6>
 		<ul class="list">
-				<li><a href="/how-to/packages/help-around-the-kitchen/photos/crowd-pleasing-casseroles.html" class="gallery-link">Make-Ahead Casseroles</a></li>
-				<li><a href="/recipes/packages/cooking-from-the-pantry/5-pantry-raid-recipes.html" class="gallery-link">Cooking from the Pantry</a></li>
-				<li><a class="gallery-link" href="/recipes/photos/family-friendly-weeknight-dinner-recipes.html">Family-Friendly Dinners</a></li>
+				<li><a href="/how-to/photos/10-supermarket-buys-for-faster-dinners.html" class="gallery-link">Supermarket Shopping Tips</a> <i class="ss-layers"></i></li>
+				<li><a href="/recipes/packages/cooking-from-the-pantry/5-pantry-raid-recipes.html" class="gallery-link">Pantry-Raid Recipes</a> <i class="ss-layers"></i></li>
+				<li><a href="/recipes/photos/shortcut-dinner-recipes.html" class="gallery-link">Shortcut Dinner Ideas</a> <i class="ss-layers"></i></li>
 				</ul>
 		</div>
 </div>
 </div>
 	<div class="col4">
 		<div class="sub-mod-four-1 sub-mod-four"><div class="set">
-        <h6><a href="/videos/channels/breakfast-for-dinner.97191.html">Ideas for Brunch <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
-        <a href="/videos/channels/breakfast-for-dinner.97191.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/2/14/0/EA1G03_omelet_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a></div>
+        <h6><a href="/videos/channels/top-rated-and-reviewed-recipes.0169002.html">Fan-Favorite Recipes <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
+        <a href="/videos/channels/top-rated-and-reviewed-recipes.0169002.html" class="ico-wrap"><img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/5/31/1/VF0607H_flourless-peanut-butter-cookies_s4x3.jpg.rend.sni4col.landscape.jpeg"/></a></div>
 <ul class="list">
-		<li><a href="/videos/channels/breakfast-for-dinner.97191.html" class="video-link">Alton's Omelet Recipe</a></li>
-		<li><a href="/videos/channels/breakfast-for-dinner.0170063.html" class="video-link">Classic Hollandaise Sauce</a></li>
-		<li><a class="video-link" href="/videos/channels/breakfast-for-dinner.0204506.html">Crispy Chicken and Waffle Sandwich</a></li>
-		<li><a class="video-link" href="/videos/channels/breakfast-for-dinner.0193010.html">Ina's Croque Monsieur</a></li>
+		<li><a class="video-link" href="/videos/channels/top-rated-and-reviewed-recipes.0169002.html">Peanut Butter Cookies</a> <i class="ss-video"></i></li>
+		<li><a class="video-link" href="/videos/channels/top-rated-and-reviewed-recipes.0127695.html">Ina's Chocolate Cake</a> <i class="ss-video"></i></li>
+		<li><a href="/videos/channels/top-rated-and-reviewed-recipes.98513.html" class="video-link">Venetian Macaroni and Cheese</a> <i class="ss-video"></i></li>
+		<li><a href="/videos/channels/top-rated-and-reviewed-recipes.94368.html" class="video-link">Giada's Chicken Piccata</a> <i class="ss-video"></i></li>
 		</ul>
 </div>
 </div>
@@ -1169,10 +1112,10 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 						<div class="module header"><span style="display: none" class="clicktracking" data-component-path="sni-food/components/util/header/restaurants-mega-dropdown" data-resource-path="/content/food/regions/header/restaurants-mega-dropdown/jcr:content/par/restaurants-mega-dropdown" data-resource-type="sni-food/components/util/header/restaurants-mega-dropdown"></span><div class="row">
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-1"><div class="set">
-		<a href="/restaurants/photos/where-to-eat-great-burgers-from-coast-to-coast-.html" class="ico-wrap"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/11/25/0/FN_restaurant-burger-lead_s4x3.jpg.rend.sni6col.landscape.jpeg"/><span class="ico"><i class="ss-layers"></i></span>
+		<a href="/recipes/packages/comfort-foods/on-the-road-comfort-food/where-to-slurp-great-ramen-from-coast-to-coast.html" class="ico-wrap"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/1/21/0/FN_Ramen-PHI-Cheu-02_s4x3.jpg.rend.sni6col.landscape.jpeg"/><span class="ico"><i class="ss-layers"></i></span>
 			</a></div>
-<a href="/restaurants/photos/where-to-eat-great-burgers-from-coast-to-coast-.html"><h6>Bold and Beefy</h6>
-                </a><p>Get meaty with top burgers from across the country.</p>
+<a href="/recipes/packages/comfort-foods/on-the-road-comfort-food/where-to-slurp-great-ramen-from-coast-to-coast.html"><h6>Broth Investment</h6>
+                </a><p>Slurp soundly with these top-notch bowls of ramen.</p>
 		</div>
 </div>
 	<div class="col6 offset">
@@ -1184,10 +1127,10 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 </div>
 	<div class="col6 offset">
 		<div class="sub-mod-six-3 sub-mod-six"><div class="set">
-		<a href="/restaurants/photos/where-to-eat-great-pancakes-from-coast-to-coast.html" class="ico-wrap"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/2/0/FN_pancake-guide-pollys-pancake-parlor.jpg.rend.sni6col.landscape.jpeg"/><span class="ico"><i class="ss-layers"></i></span>
+		<a href="/restaurants/photos/welcome-to-austin-texas-a-newcomers-eating-tour.html" class="ico-wrap"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/6/27/0/FN_Austin-FranklinBBQ-Plate_s4x3.jpg.rend.sni6col.landscape.jpeg"/><span class="ico"><i class="ss-layers"></i></span>
 			</a></div>
-<a href="/restaurants/photos/where-to-eat-great-pancakes-from-coast-to-coast.html"><h6>Flip-Worthy Pancakes</h6>
-                </a><p>See how flapjacks&nbsp;stack up from coast to coast. &nbsp;</p>
+<a href="/restaurants/photos/welcome-to-austin-texas-a-newcomers-eating-tour.html"><h6>All About Austin&nbsp;</h6>
+                </a><p>Bring a Texas-size appetite for barbecue, tacos and more.&nbsp;</p>
 		</div>
 </div>
 	<div class="col6 offset">
@@ -1227,7 +1170,7 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 	<h6>City Guides:</h6>
 	<ul class="inline">
 		<li>
-				<a href="/restaurants/articles/on-the-road-eats-austin-city-guide.html">Austin</a></li>
+				<a href="/restaurants/photos/welcome-to-boston-a-newcomers-eating-tour.html">Boston</a></li>
 		<li>
 				<a href="/restaurants/articles/on-the-road-eats-chicago-city-guide.html">Chicago</a></li>
 		<li>
@@ -1245,25 +1188,25 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 						<div class="module header"><span style="display: none" class="clicktracking" data-component-path="sni-food/components/util/header/videos-mega-dropdown" data-resource-path="/content/food/regions/header/videos-mega-dropdown/jcr:content/par/videos-mega-dropdown" data-resource-type="sni-food/components/util/header/videos-mega-dropdown"></span><div class="row">
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-1"><div class="set">
-		<a href="/recipes/packages/love-your-kitchen/recipe-shortcuts.0135994.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/1/30/0/MN0203H_4-Step-Chicken-Marengo_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/recipes/packages/love-your-kitchen/recipe-shortcuts.0135994.html"><h6>Easy Weeknights</h6>
+		<a href="/recipes/packages/off-the-menu/how-to-make-restaurant-favorites-at-home.0125737.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2008/10/28/0/top10_chickenparmesan_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/recipes/packages/off-the-menu/how-to-make-restaurant-favorites-at-home.0125737.html"><h6>Spring Is Coming</h6>
                 </a><ul class="list">
-			<li><a class="video-link" href="/recipes/packages/love-your-kitchen/recipe-shortcuts.0135994.html">4-Step Chicken Marengo</a></li>
-			<li><a class="video-link" href="/videos/channels/family-friendly-weeknight-meals-recipes-and-how-tos.0151359.html">Black Bean Beef Sliders</a></li>
-			<li><a class="video-link" href="/videos/channels/breakfast-for-dinner.0204504.html">Thyme Pasta Frittata</a></li>
-			<li><a class="video-link" href="/videos/channels/cooking-from-the-pantry.0195985.html">Tuna Melt Mac and Cheese</a></li>
+			<li><a class="video-link" href="/recipes/packages/off-the-menu/how-to-make-restaurant-favorites-at-home.0125737.html">Chicken Parmesan</a> <i class="ss-video"></i></li>
+			<li><a class="video-link" href="/videos/channels/breakfast-for-dinner.0131774.html">Homemade Hash Browns</a> <i class="ss-video"></i></li>
+			<li><a class="video-link" href="/recipes/packages/off-the-menu/how-to-make-restaurant-favorites-at-home.0135148.html">Chicken Avocado Egg Rolls</a> <i class="ss-video"></i></li>
+			<li><a class="video-link" href="/recipes/packages/off-the-menu/how-to-make-restaurant-favorites-at-home.0232212.html">Skillet Brownies</a> <i class="ss-video"></i></li>
 			</ul>
 	</div>
 </div>
 	<div class="col6 offset">
 		<div class="sub-mod-six sub-mod-six-2"><div class="set">
-		<a href="/videos/players/food-network-full-episodes.vc.eb27cfd6-7587-49df-a3f7-70c26ee14c69.0226915.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/12/17/0/KC0409_Co-hosts-04_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
-<a href="/videos/players/food-network-full-episodes.vc.eb27cfd6-7587-49df-a3f7-70c26ee14c69.0226915.html"><h6>Watch Full Episodes</h6>
+		<a href="/videos/players/food-network-full-episodes.vc.a9bfac32-1c99-45f9-9052-8fc83d397c81.html"><img height="147" width="196" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/5/15/0/fnd_Guy-Fieri-Diners-Drive-Ins-Dives_s4x3.jpg.rend.sni6col.landscape.jpeg"/></a></div>
+<a href="/videos/players/food-network-full-episodes.vc.a9bfac32-1c99-45f9-9052-8fc83d397c81.html"><h6>Watch Full Episodes</h6>
                 </a><ul class="list">
-			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.eb27cfd6-7587-49df-a3f7-70c26ee14c69.0226915.html">The Kitchen</a></li>
-			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.b0688a41-b957-4d94-a327-7d3d35cb0928.0214264.html">Chopped</a></li>
-			<li><a href="/videos/players/food-network-full-episodes.vc.86f15367-8628-4fca-8c6e-f3a8e3f94198.0179213.html" class="video-link">Cupcake Wars</a></li>
-			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.870e03b6-47ba-4216-989e-689c35a08d48.0218760.html">Guy's Grocery Games</a></li>
+			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.a9bfac32-1c99-45f9-9052-8fc83d397c81.html">Diners, Drive-Ins and Dives</a> <i class="ss-video"></i></li>
+			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.b0688a41-b957-4d94-a327-7d3d35cb0928.html">Chopped</a> <i class="ss-video"></i></li>
+			<li><a href="/videos/players/food-network-full-episodes.vc.a6f33900-0318-4b3c-a5b6-859e716dc21b.html" class="video-link">The Pioneer Woman</a> <i class="ss-video"></i></li>
+			<li><a class="video-link" href="/videos/players/food-network-full-episodes.vc.70e1480f-60e8-4f0e-b816-c1519597f2d4.html">Cutthroat Kitchen</a> <i class="ss-video"></i></li>
 			</ul>
 	</div>
 </div>
@@ -1273,29 +1216,29 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
         	<ul>
         		<li>
         			<div>
-        					<a href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233928.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/2/18/0/ST0100_mentors-Bobby-Alex-Michael-Curtis_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233928.html"><p>Chefs: Cooking at Home vs. on Camera</p>
+        					<a href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233394.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/2/23/1/ST0101_Michael-Bobby_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/all-star-academy/all-star-academy-videos.fc26a6ae-0c75-4109-866e-2cfd25c9b958.0233394.html"><p>BFF Star Chefs' Hilarious Rivalry</p>
                                     </a></div>
 
         			<div>
-        					<a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230092.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2014/9/30/0/CQAH2102_Alex-Geoffrey-Chris-Ted_s16x9.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230092.html"><p>Chopped Judges Talk Smack Over Sweets</p>
+        					<a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230084.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2014/1/10/0/BLITZ_Alex-Guarnaschelli-02_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/chopped/chopped-video-gallery.48522bdb-547a-41bd-97b0-a93ff0d77daa.0230084.html"><p>Chopped Judges Play with Fire</p>
                                     </a></div>
 
         			<div>
-        					<a href="/shows/kids-baking-championship/kids-baking-championship-videos.d0889361-1f06-4195-a1b1-da4d5a8ad51f.0232980.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/2/10/0/KB0103_Cody_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/kids-baking-championship/kids-baking-championship-videos.d0889361-1f06-4195-a1b1-da4d5a8ad51f.0232980.html"><p>Kid Baker's Heartwarming Act</p>
+        					<a href="/shows/guys-grocery-games/guys-grocery-games-videos.0bda22aa-beed-4959-aa75-2735e9e5d9ab.0233376.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/secured/fullset/2015/2/23/1/GK0415_Guy-Fieri-quiz_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/guys-grocery-games/guys-grocery-games-videos.0bda22aa-beed-4959-aa75-2735e9e5d9ab.0233376.html"><p>DDD Chefs Play Trivia on GGG</p>
                                     </a></div>
 
         			</li>
         			<li>
         			<div>
-        					<a href="/shows/the-kitchen/the-kitchen-video-gallery.2a1b19ba-7743-4807-9579-cc3e24bd4212.0229091.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/10/28/0/KC0402H_Jeff-Mauro-Sunny-Anderson-02_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/the-kitchen/the-kitchen-video-gallery.2a1b19ba-7743-4807-9579-cc3e24bd4212.0229091.html"><p>The Kitchen's Tips to Build a Better Soup</p>
+        					<a href="/shows/the-kitchen/the-kitchen-video-gallery.2a1b19ba-7743-4807-9579-cc3e24bd4212.0220450.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/3/10/0/KC0111_Katie-Lee-Geoffrey-Zakarian-Jeff-Mauro_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/the-kitchen/the-kitchen-video-gallery.2a1b19ba-7743-4807-9579-cc3e24bd4212.0220450.html"><p>Bacon Tips from The Kitchen</p>
                                     </a></div>
 
         			<div>
-        					<a href="/shows/cutthroat-kitchen/altons-after-show-1.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/16/0/KT0613_Alton-Brown.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/cutthroat-kitchen/altons-after-show-1.html"><p>Alton's After-Show: No-Thumbs Sabotage</p>
+        					<a href="/shows/cutthroat-kitchen/altons-after-show-1.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/3/2/0/KT0704_Alton-Brown.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/cutthroat-kitchen/altons-after-show-1.html"><p>Alton Makes the Perfect Omelet</p>
                                     </a></div>
 
         			<div>
-        					<a href="/shows/guys-grocery-games/guys-grocery-games-videos.2e4127aa-5152-4400-b122-b8f8991483d6.0221676.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/5/5/0/GK0200_BTS_Guy-Fieri_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/guys-grocery-games/guys-grocery-games-videos.2e4127aa-5152-4400-b122-b8f8991483d6.0221676.html"><p>Guy's Tour of Flavortown</p>
+        					<a href="/shows/the-pioneer-woman/the-pioneer-woman-video-gallery.9affa8c2-4756-46b2-b175-1b526e29d1fb.html" class="ico-wrap"><img height="71" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2012/3/20/0/0182149_strawberry-oatmeal-bars_s4x3.jpg.rend.sni4col.wide.jpeg"/></a><a href="/shows/the-pioneer-woman/the-pioneer-woman-video-gallery.9affa8c2-4756-46b2-b175-1b526e29d1fb.html"><p>The Pioneer Woman's Lunchbox Faves</p>
                                     </a></div>
 
         			</li>
@@ -1659,10 +1602,10 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 				<div class="row">
 	<div class="col5 offset">
         <div class="set big">
-	<h6>SAVE UP TO 70%</h6>
-	<a href="http://www.foodnetworkstore.com/sale/index.php?v=sale&ecid=PRF-FOOD-100410&pa=PRF-FOOD-100410" class="ico-wrap" target="_blank"><img height="121" width="161" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/13/0/FNStore_RR_orangebandb.jpg.rend.sni5col.landscape.jpeg"/></a></div>
-<p><a href="http://www.foodnetworkstore.com/sale/index.php?v=sale&ecid=PRF-FOOD-100410&pa=PRF-FOOD-100410" target="_blank">Shop great deals at Food Network Store today!</a></p>
-<b><a href="http://www.foodnetworkstore.com/sale/index.php?v=sale&ecid=PRF-FOOD-100410&pa=PRF-FOOD-100410" target="_blank">Shop Now &gt;&gt;</a></b>
+	<h6>FREE SHIPPING</h6>
+	<a href="http://shop.foodnetworkstore.com/nav/chef/rachaelray/0?ecid=PRF-FOOD-100418&pa=PRF-FOOD-100418" class="ico-wrap" target="_blank"><img height="121" width="161" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/3/2/0/FNStore_161x121_RR_FreeShipping_Mar2015.jpg.rend.sni5col.landscape.jpeg"/></a></div>
+<p><a href="http://shop.foodnetworkstore.com/nav/chef/rachaelray/0?ecid=PRF-FOOD-100418&pa=PRF-FOOD-100418" target="_blank">For a limited time, get free shipping on all Rachael Ray products!</a></p>
+<b><a href="http://shop.foodnetworkstore.com/nav/chef/rachaelray/0?ecid=PRF-FOOD-100418&pa=PRF-FOOD-100418" target="_blank">Shop Now &gt;&gt;</a></b>
 </div>
 	<div class="col5 offset">
         <h6><a href="http://www.foodnetworkstore.com/departments/index.php?v=department&amp;ecid=PRF-FOOD-100292&amp;pa=PRF-FOOD-100292" target="_blank">Shop Departments <span class="btn radial tiny"><i class="ss-navigateright"></i></span></a></h6>
@@ -1706,10 +1649,10 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 </div>
 </div>
 <div class="bottom">
-	<h6><p><b><i>EXCLUSIVELY AT FN STORE!</i></b></p></h6>
+	<h6><p><b><i>LIMITED-TIME OFFER!</i></b></p></h6>
 	<ul class="inline">
 		<li class="last">
-				<a href="http://www.foodnetworkstore.com/detail.php?p=735078&amp;ecid=PRF-FOOD-100270&amp;pa=PRF-FOOD-100270" target="_blank">FoodNetwork.com 2015 Calendar &gt;&gt;</a></li>
+				<a href="http://shop.foodnetworkstore.com/nav/chef/rachaelray/0?ecid=PRF-FOOD-100419&amp;pa=PRF-FOOD-100419" target="_blank">Get Free Shipping on Rachael Ray Today!</a></li>
 		</ul>
 	<a href="http://www.foodnetworkstore.com/?ecid=PRF-FOOD-100010&pa=PRF-FOOD-100010" class="btn vip last"><b>SHOP FOOD NETWORK STORE</b></a></div>
 					
@@ -1721,7 +1664,6 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 </div>
 <div class="pull-right">
     
-
 
 
   <ul class="social-login"></ul>
@@ -1749,22 +1691,15 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
     </li>
   </script>
 
-
-
-
-
-
-
-<ul class="mybox"></ul>
-<script id="recipebox-dropdown-data" type="profile/template">
+<ul class="mybox">
   <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#"><span>Recipe Box</span><b class="caret sm"><i class="ss-navigatedown"></i></b></a>
     <ul class="dropdown-menu">
-      <li><a href="{{recipeBoxUrl}}">Recipes</a></li>
-      <li><a href="{{shoppingListUrl}}">Grocery List</a></li>
+      <li><a href="http://recipes.foodnetwork.com">Recipes</a></li>
+      <li><a href="http://recipes.foodnetwork.com/shopping-list">Grocery List</a></li>
     </ul>
   </li>
-</script>
+</ul>
 </div></nav>
 </div>
 </header>
@@ -1824,14 +1759,14 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 <figure class="overlay wrap">
-	<a href="http://blog.foodnetwork.com/fn-dish/2015/02/eggs-make-everything-better/" class="ico-wrap">
+	<a href="/holidays-and-parties/packages/st-patricks-day/green-st--patrick-s-day-recipes.page-4.html" class="ico-wrap">
 		
 			
 			
 				
 					
 					
-						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2009/9/25/0/FNM-110109-WN-003_s4x3.jpg.rend.snigallerythumb.jpeg"/>
+						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/1/29/0/FN_St-Patricks-Day-Mint-Schnapps-Shakes_s4x3.jpg.rend.snigallerythumb.jpeg"/>
 					
 				
 			
@@ -1839,9 +1774,9 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		
 	</a>
     <figcaption>
-		<span class="slug">Eggs Any Time</span>
-		<a href="http://blog.foodnetwork.com/fn-dish/2015/02/eggs-make-everything-better/">
-			<h4><a href="http://blog.foodnetwork.com/fn-dish/2015/02/eggs-make-everything-better/" adhocenable="false">Ready to Elevate Any Meal? Add an Egg</a></h4>
+		<span class="slug">St. Patrick's Day Ideas</span>
+		<a href="/holidays-and-parties/packages/st-patricks-day/green-st--patrick-s-day-recipes.page-4.html">
+			<h4><a href="/holidays-and-parties/packages/st-patricks-day/green-st--patrick-s-day-recipes.page-4.html" adhocenable="false">Going Green: Festive Shake, Cake and Treat Recipes</a></h4>
 		</a>
 	</figcaption>
 </figure>
@@ -1855,14 +1790,14 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 <figure class="overlay wrap">
-	<a href="/recipes/photos/5-ways-to-eat-fresh-snow.page-2.html" class="ico-wrap">
+	<a href="/healthy/packages/healthy-every-week/superfood-breakfasts.html" class="ico-wrap">
 		
 			
 			
 				
 					
 					
-						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/12/0/FN_Snow-Maple-Snow-Cone.jpg.rend.snigallerythumb.jpeg"/>
+						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/4/23/0/FNK_Cereal-Goji-Berries-Strawberry_s4x3.jpg.rend.snigallerythumb.jpeg"/>
 					
 				
 			
@@ -1870,9 +1805,9 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		
 	</a>
     <figcaption>
-		<span class="slug">Bring it On, Blizzards</span>
-		<a href="/recipes/photos/5-ways-to-eat-fresh-snow.page-2.html">
-			<h4><a adhocenable="false" href="/recipes/photos/5-ways-to-eat-fresh-snow.page-2.html">5 Ways to Eat Fresh Snow</a></h4>
+		<span class="slug">Easy A.M. Win</span>
+		<a href="/healthy/packages/healthy-every-week/superfood-breakfasts.html">
+			<h4><a href="/healthy/packages/healthy-every-week/superfood-breakfasts.html" adhocenable="false">The Best Fix for Your Morning? A Superfood-Filled Breakfast</a></h4>
 		</a>
 	</figcaption>
 </figure>
@@ -1886,14 +1821,14 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 <figure class="overlay wrap">
-	<a href="/restaurants/photos/where-to-eat-great-pancakes-from-coast-to-coast.page-10.html" class="ico-wrap">
+	<a href="/recipes/food-network-kitchens/carrot-cheesecake/how-to-make-carrot-cheesecake.html" class="ico-wrap">
 		
 			
 			
 				
 					
 					
-						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/2/2/0/FN_pancake-guide-clinton-street-baking-company.jpg.rend.snigallerythumb.jpeg"/>
+						<img height="95" width="126" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2013/11/26/0/FNK_Carrot-Cake-Cheesecakes_s4x3.jpg.rend.snigallerythumb.jpeg"/>
 					
 				
 			
@@ -1901,9 +1836,9 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 		
 	</a>
     <figcaption>
-		<span class="slug">Morning Glory</span>
-		<a href="/restaurants/photos/where-to-eat-great-pancakes-from-coast-to-coast.page-10.html">
-			<h4><a href="/restaurants/photos/where-to-eat-great-pancakes-from-coast-to-coast.page-10.html" adhocenable="false">The Fluffiest Pancakes On the Road</a></h4>
+		<span class="slug">Dessert Mash-up How-To</span>
+		<a href="/recipes/food-network-kitchens/carrot-cheesecake/how-to-make-carrot-cheesecake.html">
+			<h4><a href="/recipes/food-network-kitchens/carrot-cheesecake/how-to-make-carrot-cheesecake.html" adhocenable="false">One Part Carrot Cake, One Part Cheesecake, Entirely Delicious</a></h4>
 		</a>
 	</figcaption>
 </figure>
@@ -2028,10 +1963,7 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 
-
-
-
-	<div class="community-rating" id="communityRating"></div>
+<div class="community-rating" id="communityRating"></div>
 
             
 
@@ -2123,7 +2055,6 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 
-<div id="social-toolbar" class="module global-toolbar mSocial section hori">
 
 
 
@@ -2133,16 +2064,18 @@ if(navigator.appVersion.indexOf('MSIE')>=0)document.write('-'+'-'+unescape('%3E'
 
 
 
-<script>
-SNI.Food.Toolbar.init({
-  twitterText: "Get the recipe for Spinach and Mushroom Stuffed Chicken Breasts via @FoodNetwork",
-  pintrestText: "Spinach and Mushroom Stuffed Chicken Breasts Recipe : Rachael Ray : Food Network - FoodNetwork.com",
-  ogTitle: "Spinach and Mushroom Stuffed Chicken Breasts Recipe : Rachael Ray : Food Network",
-  ogDesc: "Get this all-star, easy-to-follow Spinach and Mushroom Stuffed Chicken Breasts recipe from Rachael Ray.",
-  ogImg: "http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/4/19/1/FN_chicken-breasts-006_s4x3.jpg",
-  ogType:"article"
-});
-</script>
+
+<div id="socialToolbar" class="global-toolbar section" data-st='{"pgtitle":"Spinach and Mushroom Stuffed Chicken Breasts Recipe : Rachael Ray : Food Network","emailUrl":"http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.emailsend.html"}'>
+<div class="st-left">
+
+
+	<div class="st-item saverecipe"></div>
+
+		<div class="st-item print"><a class="btn fig" title="Print the page: Spinach and Mushroom Stuffed Chicken Breasts Recipe : Rachael Ray : Food Network" target="_blank" href="http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.print.html"><i class="ss-print"></i>Print</a></div>
+	<div class="st-item email"><a data-toggle="modal" data-target="#email-modal" title='Share on e-mail' class="btn fig" href="mailto:?subject=Food%20Network:%20Spinach and Mushroom Stuffed Chicken Breasts&body=http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html%0A%0AGet this all-star, easy-to-follow Spinach and Mushroom Stuffed Chicken Breasts recipe from Rachael Ray."><i class="ss-mail"></i>Email</a></div>
+</div>
+<div class="st-right">
+<div class="st-item fblike"><a class='icon' title='Facebook' target='_blank' href="https://www.facebook.com/sharer/sharer.php?u=http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html%3Fsoc%3Dsocialsharingfb"><i class="sss-facebook"></i></a></div><div class="st-item pinit"><a class='icon' title='Pinterest' target='_blank' href='https://pinterest.com/pin/create%2Fbutton/?url=http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html%3Fsoc%3Dsocialsharingpinterest&amp;media=http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/4/19/1/FN_chicken-breasts-006_s4x3.jpg&amp;description=Spinach+and+Mushroom+Stuffed+Chicken+Breasts+Recipe+%3A+Rachael+Ray+%3A+Food+Network+-+FoodNetwork.com'><i class='sss-pinterest'></i></a></div><div class="st-item tweet"><a class='icon' title='Twitter' target='_blank' href='https://twitter.com/share?url=http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html%3Fsoc%3Dsocialsharingtw&amp;via=foodnetwork&amp;text=Spinach+and+Mushroom+Stuffed+Chicken+Breasts+Recipe+%3A+Rachael+Ray+%3A+Food+Network'><i class='sss-twitter'></i></a></div><div class="st-item gplus"><a class='icon' title='GooglePlus' target='_blank' href='https://plus.google.com/share?url=http://www.foodnetwork.com/recipes/rachael-ray/spinach-and-mushroom-stuffed-chicken-breasts-recipe.html%3Fsoc%3Dsocialsharinggplus'><i class='sss-googleplus'></i></a></div></div>
 </div></section>
 
 		
@@ -2398,6 +2331,8 @@ SNI.Food.Toolbar.init({
     <script type="text/javascript" src="//secure-us.imrworldwide.com/novms/js/2/ggcmb400.js"></script>
 
     
+    
+
     
 
     
@@ -3065,7 +3000,7 @@ SNI.Food.Toolbar.init({
 <header class="hr">
   <h5>Cooking Tips</h5>
   
-        <nav class="cta"><a href="/recipes/packages/comfort-foods/easy-one-pot-meals/one-pot-wonders.html">More Cooking Tips<i class="ss-navigateright"></i></a></nav>
+        <nav class="cta"><a href="/videos/channels/easter-brunch-with-sunny-ina-and-giada.html">More Cooking Tips<i class="ss-navigateright"></i></a></nav>
   
 </header>
 
@@ -3078,750 +3013,308 @@ SNI.Food.Toolbar.init({
     </div>
       <div class="vid-list col6"></div>
   </div>
-    <!--/content/food/recipes/packages/c/comfort-foods/easy-one-pot-meals/one-pot-wonders-->
+    <!--/content/food/videos/channels/e/easter-brunch-with-sunny-ina-and-giada-->
   <script>
     var pdkplayerSecInlIframe = SNI.Food.Video.SecondaryInline($.extend(true, {}, 
                                                                     { player: { autoplay: false, containerId: "playerSecInlIframe" }}, 
                                                                     { alternateEndframe: { frameId: "nextEndframe-playerSecInlIframe" } },
                                                                     {"channels": [{
-  "title": "One-Pot Wonders",
+  "title": "Easter Brunch with Sunny, Ina and Giada",
   "start": 0,
-  "end": 31,
-  "total": 32,
+  "end": 12,
+  "total": 13,
   "videos": [
     {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/mlJVmNcCmx3y?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275050051795",
-      "title": "Beef Stew With Root Vegetables",
-      "description": "Ree adds root vegetables to her beef stew to make a hearty one-dish meal.",
-      "length_hhmmss": "04:06",
-      "length": 246,
-      "length_sss": 246,
-      "nlvid": "0202597",
-      "scrid": "1976100",
-      "cmsid": "9019490e-c3b7-40c7-a842-d4505fbf611d",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/beef-stew-with-root-vegetables-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/165/175/0202597_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/165/175/0202597_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/beef-stew-with-root-vegetables-0202597.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/JCGHtDoZi_mO?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276445763851",
-      "title": "Chicken Soup With Matzo Balls",
-      "description": "Ina uses her rich homemade stock to make chicken soup with matzo balls.",
-      "length_hhmmss": "03:48",
-      "length": 228,
-      "length_sss": 228,
-      "nlvid": "0146115",
-      "scrid": "919618",
-      "cmsid": "17a0d664-2442-41e9-9e1d-23f7ab84c338",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ina-garten/chicken-soup-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/472/231/0146115_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/472/231/0146115_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "",
-      "showUrl": "",
-      "hostName": "",
-      "hostUrl": "",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/chicken-soup-with-matzo-balls-0146115.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/b8013zJyhGp3?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275222595977",
-      "title": "AB's New England Clam Chowder",
-      "description": "Bring the seaside inside with a bowl of Anne's New England clam chowder.",
-      "length_hhmmss": "02:52",
-      "length": 172,
-      "length_sss": 172,
-      "nlvid": "0170060",
-      "scrid": "1322689",
-      "cmsid": "a9b28706-d90f-40b9-93b2-5e25364f242b",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/anne-burrell/new-england-clam-chowder-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/329/739/0170060_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/329/739/0170060_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Secrets of a Restaurant Chef",
-      "showUrl": "/content/food/shows/s/secrets-of-a-restaurant-chef.html",
-      "hostName": "Anne Burrell",
-      "hostUrl": "/content/food/chefs/anne-burrell.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/abs-new-england-clam-chowder-0170060.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/5jdAgTc_s3da?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275147331600",
-      "title": "Ree's Chicken Spaghetti",
-      "description": "Your family will love Ree's Chicken Spaghetti as much as her family does.",
-      "length_hhmmss": "03:41",
-      "length": 221,
-      "length_sss": 221,
-      "nlvid": "0192985",
-      "scrid": "1701416",
-      "cmsid": "11984b9c-6ead-4c07-a749-f6b51c6b2279",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/chicken-spaghetti-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/257/967/0192985_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/257/967/0192985_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/rees-chicken-spaghetti-0192985.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/jF2KT9i6M2yp?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276634691856",
-      "title": "Lobster Macaroni and Cheese",
-      "description": "The Neelys make comfort food for grownups: Lobster Macaroni and Cheese.",
-      "length_hhmmss": "03:37",
-      "length": 217,
-      "length_sss": 217,
-      "nlvid": "0136016",
-      "scrid": "745287",
-      "cmsid": "314c675a-eb43-4fb3-a2d0-2ae8b8ddf535",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/neelys/lobster-macaroni-and-cheese-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/652/411/0136016_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/652/411/0136016_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Down Home with the Neelys",
-      "showUrl": "/content/food/shows/d/down-home-with-the-neelys.html",
-      "hostName": "Patrick and Gina Neely",
-      "hostUrl": "/content/food/chefs/patrick-and-gina-neely.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/lobster-macaroni-and-cheese-0136016.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/a79L5LpyEt0c?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279742531959",
-      "title": "Schoolday Chicken and Noodles",
-      "description": "Ree's chicken and noodles prove to be a great lunch for a busy schoolday.",
-      "length_hhmmss": "04:04",
-      "length": 244,
-      "length_sss": 244,
-      "nlvid": "0204520",
-      "scrid": "2006624",
-      "cmsid": "a53dd5ce-c24a-4d3b-8b0f-a2336ea7d6d6",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/chicken-and-noodles-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/544/275/0204520_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/544/275/0204520_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/schoolday-chicken-and-noodles-0204520.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/mLdNFmwV64OT?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275025475827",
-      "title": "Chicken Pot Pie Casserole",
-      "description": "Alton Brown's dish is a cross between chicken pot pie and casserole.",
-      "length_hhmmss": "05:00",
-      "length": 300,
-      "length_sss": 300,
-      "nlvid": "79153",
-      "scrid": "289815",
-      "cmsid": "0b501d02-51b3-48f6-9cab-d2bfc3d3a2b9",
-      "relatedText": "Get the Recipe",
-      "relatedUrl": "/food/recipes/recipe/0,,FOOD_9936_21192,00.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/141/751/79153_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/141/751/79153_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Good Eats",
-      "showUrl": "/content/food/shows/g/good-eats.html",
-      "hostName": "Alton Brown",
-      "hostUrl": "/content/food/chefs/alton-brown.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/chicken-pot-pie-casserole-79153.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/pjO4Z2xfNUm1?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275030595613",
-      "title": "Spaghetti & Meatball \"Stoup\"",
-      "description": "Rachael prepares a satisfying meal with a twist on spaghetti and meatballs.",
-      "length_hhmmss": "06:19",
-      "length": 379,
-      "length_sss": 379,
-      "nlvid": "79160",
-      "scrid": "289838",
-      "cmsid": "005e5e90-1cf3-40eb-bd69-118ce1a570db",
-      "relatedText": "Get the Recipe",
-      "relatedUrl": "/food/recipes/recipe/0,,FOOD_9936_29037,00.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/146/631/79160_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/146/631/79160_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/spaghetti-and-meatball-stoup-79160.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/AlHZ8UrVkJ8s?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275806275650",
-      "title": "Pimiento Cheesy Mac",
-      "description": "Pimiento Cheesy Mac: two favorite comfort foods in one quick and easy dish!",
-      "length_hhmmss": "02:05",
-      "length": 125,
-      "length_sss": 125,
-      "nlvid": "0165926",
-      "scrid": "1254288",
-      "cmsid": "0b6f2f70-3de9-44f7-9315-395b2887d6f2",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/pimiento-cheesy-mac-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/886/371/0165926_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/886/371/0165926_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/pimiento-cheesy-mac-0165926.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/8byevRJvtJ5n?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275176003543",
-      "title": "Granddad Jack's Brunswick Stew",
-      "description": "Trisha teaches her nephews to make their Granddad Jack's Brunswick Stew.",
-      "length_hhmmss": "03:49",
-      "length": 229,
-      "length_sss": 229,
-      "nlvid": "0188257",
-      "scrid": "1539556",
-      "cmsid": "d048eaaf-9f87-40b8-ad87-11107b0c5fa6",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/jacks-brunswick-stew-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/285/294/0188257_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/285/294/0188257_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Trisha's Southern Kitchen",
-      "showUrl": "/content/food/shows/t/trishas-southern-kitchen.html",
-      "hostName": "Trisha Yearwood",
-      "hostUrl": "/content/food/chefs/trisha-yearwood.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/granddad-jacks-brunswick-stew-0188257.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/aFqKPX2wLemG?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279811651716",
-      "title": "Grilled Chicken Caesar Mac",
-      "description": "A cross between mac and cheese and grilled chicken Caesar salad: hail yes!",
-      "length_hhmmss": "03:52",
-      "length": 232,
-      "length_sss": 232,
-      "nlvid": "0216233",
-      "scrid": "2247531",
-      "cmsid": "3a61eea8-9a0a-4740-af30-a190718dfd0e",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/grilled-chicken-caesar-mac-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/610/191/0216233_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/610/191/0216233_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "",
-      "showUrl": "",
-      "hostName": "",
-      "hostUrl": "",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/grilled-chicken-caesar-mac-0216233.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/TDpvORIGhVqY?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279796291813",
-      "title": "Chicken Tortilla Casserole",
-      "description": "The South meets South of the Border in Trisha's Chicken Tortilla Casserole.",
-      "length_hhmmss": "03:53",
-      "length": 233,
-      "length_sss": 233,
-      "nlvid": "0216409",
-      "scrid": "2251234",
-      "cmsid": "ed850ad9-7f2b-4258-802d-d36638ae4fa3",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/trisha-yearwood/chicken-tortilla-casserole-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/595/551/0216409_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/595/551/0216409_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Trisha's Southern Kitchen",
-      "showUrl": "/content/food/shows/t/trishas-southern-kitchen.html",
-      "hostName": "Trisha Yearwood",
-      "hostUrl": "/content/food/chefs/trisha-yearwood.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/chicken-tortilla-casserole-0216409.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/ej9YxH9ZpKcr?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276766787883",
-      "title": "Mac and Cheese Throwdown",
-      "description": "Whose dish will prove itself to be the best macaroni and cheese in America?",
-      "length_hhmmss": "02:45",
-      "length": 165,
-      "length_sss": 165,
-      "nlvid": "0122888",
-      "scrid": "579375",
-      "cmsid": "4b0692cd-eec4-4b28-81a0-ea5c7ea1b381",
-      "relatedText": "Get the recipes",
-      "relatedUrl": "/throwdown-with-bobby-flay/man-n-cheese/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/778/387/0122888_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/778/387/0122888_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Throwdown with Bobby Flay",
-      "showUrl": "/content/food/shows/t/throwdown-with-bobby-flay.html",
-      "hostName": "Bobby Flay",
-      "hostUrl": "/content/food/chefs/bobby-flay.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/mac-and-cheese-throwdown-0122888.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/3Nm9lUODCKyM?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279765059859",
-      "title": "Mac-n-Smoked-Gouda Casserole",
-      "description": "Rachael makes a meal that will travel: her Mac-n-Smoked-Gouda Casserole.",
-      "length_hhmmss": "03:57",
-      "length": 237,
-      "length_sss": 237,
-      "nlvid": "0208115",
-      "scrid": "2079550",
-      "cmsid": "b17bcda4-5917-4bfa-aceb-fa1b0061ec84",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/mac-n-smoked-gouda-with-cauliflower-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/565/771/0208115_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/565/771/0208115_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/mac-n-smoked-gouda-casserole-0208115.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/nUYUxCpbhpFJ?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279809603851",
-      "title": "Rice Cooker Mac and Cheese",
-      "description": "Our Food Network Kitchen makes quick mac and cheese in a rice cooker.",
-      "length_hhmmss": "01:55",
-      "length": 115,
-      "length_sss": 115,
-      "nlvid": "0213191",
-      "scrid": "2190535",
-      "cmsid": "fb0be1a2-3642-48f3-a33d-4b1819523c5d",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/food-network-kitchens/rice-cooker-mac-and-cheese-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0213191_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0213191_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "",
-      "showUrl": "",
-      "hostName": "",
-      "hostUrl": "",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/rice-cooker-mac-and-cheese-0213191.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/MEqnGmF8q_51?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276675139904",
-      "title": "Macaroni and Cheese",
-      "description": "Sunny makes her spicy version of her mom's macaroni and cheese.",
-      "length_hhmmss": "05:24",
-      "length": 324,
-      "length_sss": 324,
-      "nlvid": "0133691",
-      "scrid": "686609",
-      "cmsid": "41ddeaac-bc9b-4ef8-98f8-200a7c6d5c8b",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/spicy-macaroni-and-cheese-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/690/999/0133691_92x69.jpg",
-      "videoFormat": "SD",
-      "showName": "Cooking for Real",
-      "showUrl": "/content/food/shows/c/cooking-for-real.html",
-      "hostName": "Sunny Anderson",
-      "hostUrl": "/content/food/chefs/sunny-anderson.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/macaroni-and-cheese-0133691.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/hWKok7LLz8JA?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/315762755851",
-      "title": "Zesty Tuna Noodle Casserole",
-      "description": "Sunny makes a zesty cheese version of the classic Tuna Noodle Casserole.",
-      "length_hhmmss": "03:26",
-      "length": 206,
-      "length_sss": 206,
-      "nlvid": "0216871",
-      "scrid": "2259101",
-      "cmsid": "a5a137dd-b53b-4bc8-8ceb-b126a3f028db",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/sunny-anderson/sunnys-tuna-noodle-casserole-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/79/851/0216871_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/79/851/0216871_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Cooking for Real",
-      "showUrl": "/content/food/shows/c/cooking-for-real.html",
-      "hostName": "Sunny Anderson",
-      "hostUrl": "/content/food/chefs/sunny-anderson.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/zesty-tuna-noodle-casserole-0216871.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/j6ckGTI0nMfZ?format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/359942211615",
-      "title": "Lean Ground Turkey Ranch Chili",
-      "description": "Lean seasoned ground turkey adds flavor, without fat, to Rachael's chili.",
-      "length_hhmmss": "04:29",
-      "length": 269,
-      "length_sss": 269,
-      "nlvid": "0229067",
-      "scrid": "2627398",
-      "cmsid": "028cde8e-e2a9-441c-bbe6-1b508b2c744b",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/ranch-style-turkey-chili-recipe.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/228/659/0229067_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/228/659/0229067_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/lean-ground-turkey-ranch-chili-0229067.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/Yck5Q11C_E5o?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279809603848",
-      "title": "Neelys' White Chicken Chili",
-      "description": "The Neelys make quick chili with rotisserie chicken and canned white beans.",
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/DA2kuT5GlSQ8?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275028035834",
+      "title": "Egg Frittata",
+      "description": "Everyday Italian cooks up a versatile egg frittata that's good hot or cold.",
       "length_hhmmss": "04:08",
       "length": 248,
       "length_sss": 248,
-      "nlvid": "0216867",
-      "scrid": "2259097",
-      "cmsid": "d02799ce-c618-4f2d-a604-01c9367e7cdf",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/patrick-and-gina-neely/white-chicken-chili-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0216867_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0216867_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Down Home with the Neelys",
-      "showUrl": "/content/food/shows/d/down-home-with-the-neelys.html",
-      "hostName": "Patrick and Gina Neely",
-      "hostUrl": "/content/food/chefs/patrick-and-gina-neely.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/neelys-white-chicken-chili-0216867.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/Qy_bVGf4bF45?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279809603625",
-      "title": "Broccoli Cheese Soup With Ham",
-      "description": "A generous amount of ham adds smoky goodness to Ree's Broccoli Cheese Soup.",
-      "length_hhmmss": "03:25",
-      "length": 205,
-      "length_sss": 205,
-      "nlvid": "0216869",
-      "scrid": "2259099",
-      "cmsid": "e9e9a5db-e64f-41e6-a154-c7f72690760e",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/broccoli-cheese-soup-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0216869_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/608/239/0216869_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/broccoli-cheese-soup-with-ham-0216869.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/pJ3Nypfw58s4?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/275176003826",
-      "title": "Trisha's Chickless Pot Pie",
-      "description": "Chickless Pot Pie is Trisha's vegan-friendly version of a comfort classic.",
-      "length_hhmmss": "04:00",
-      "length": 240,
-      "length_sss": 240,
-      "nlvid": "0188252",
-      "scrid": "1539551",
-      "cmsid": "35688ee9-d546-4e4f-998b-c2dc3cbf78ad",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/chickless-pot-pie-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/285/295/0188252_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/285/295/0188252_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Trisha's Southern Kitchen",
-      "showUrl": "/content/food/shows/t/trishas-southern-kitchen.html",
-      "hostName": "Trisha Yearwood",
-      "hostUrl": "/content/food/chefs/trisha-yearwood.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/trishas-chickless-pot-pie-0188252.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/DbLk3eJuqDBd?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276719171782",
-      "title": "Mexican Lasagna",
-      "description": "Rachael's making a south-of-the-border take on a classic favorite: lasagna.",
-      "length_hhmmss": "03:09",
-      "length": 189,
-      "length_sss": 189,
-      "nlvid": "0132546",
-      "scrid": "671012",
-      "cmsid": "f6c3ce4d-23d3-464a-b14b-854c5985a986",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/mexican-lasagna-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/732/991/0132546_92x69.jpg",
+      "nlvid": "92415",
+      "scrid": "263629",
+      "cmsid": "d02eb552-b9e7-43d4-8bab-a3d1d76f80bc",
+      "relatedText": "Get the Recipe",
+      "relatedUrl": "/recipes/giada-de-laurentiis/frittata-with-asparagus-tomato-and-fontina-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/144/179/92415_92x69.jpg",
       "videoFormat": "SD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
+      "showName": "Everyday Italian",
+      "showUrl": "/content/food/shows/e/everyday-italian.html",
+      "hostName": "Giada De Laurentiis",
+      "hostUrl": "/content/food/chefs/giada-de-laurentiis.html",
       "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/mexican-lasagna-0132546.embed.html"
+      "embedUrl": "http://www.foodnetwork.com/videos/egg-frittata-92415.embed.html"
     },
     {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/eZ0yw_09MhJb?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/315668035940",
-      "title": "Turkey-Quinoa-Stuffed Peppers",
-      "description": "Guy serves turkey-and-quinoa-stuffed peppers with tomatillo-avocado sauce.",
-      "length_hhmmss": "04:49",
-      "length": 289,
-      "length_sss": 289,
-      "nlvid": "0208258",
-      "scrid": "2086832",
-      "cmsid": "59bc0728-c8d9-4b2a-88cd-e1e2c318c251",
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/xi4gosY5P2Zn?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/277153347684",
+      "title": "Banana Crunch Muffins",
+      "description": "Banana Crunch Muffins are an easy way to make breakfast special.",
+      "length_hhmmss": "05:35",
+      "length": 335,
+      "length_sss": 335,
+      "nlvid": "0101352",
+      "scrid": "445174",
+      "cmsid": "278f098d-5d12-4fcb-9ce9-d5e28e9e4db6",
       "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/guy-fieri/turkey-and-quinoa-stuffed-peppers-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/1013/511/0208258_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/1013/511/0208258_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Guy's Big Bite",
-      "showUrl": "/content/food/shows/g/guys-big-bite.html",
-      "hostName": "Guy Fieri",
-      "hostUrl": "/content/food/chefs/guy-fieri.html",
+      "relatedUrl": "/recipes/ina-garten/banana-crunch-muffins-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/123/31/0101352_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Barefoot Contessa",
+      "showUrl": "/content/food/shows/b/barefoot-contessa.html",
+      "hostName": "Ina Garten",
+      "hostUrl": "/content/food/chefs/ina-garten.html",
       "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/turkey-quinoa-stuffed-peppers-0208258.embed.html"
+      "embedUrl": "http://www.foodnetwork.com/videos/banana-crunch-muffins-0101352.embed.html"
     },
     {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/1almbwGMvZm0?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/319843907543",
-      "title": "Chorizo and Turkey Chili",
-      "description": "The longer Rachael's Chorizo and Turkey Chili sits, the better it gets.",
-      "length_hhmmss": "03:31",
-      "length": 211,
-      "length_sss": 211,
-      "nlvid": "0225709",
-      "scrid": "2519219",
-      "cmsid": "c068c2de-e761-402d-8871-1fed78518f0c",
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/mXmrZHEtyd0N?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/276635203909",
+      "title": "Strawberry and Rosemary Scones",
+      "description": "These scones combine sweet strawberry jam and tangy fresh rosemary.",
+      "length_hhmmss": "02:53",
+      "length": 173,
+      "length_sss": 173,
+      "nlvid": "0136038",
+      "scrid": "745694",
+      "cmsid": "a675617a-f8de-4e1e-9762-e8996e260854",
       "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/mexican-chorizo-and-turkey-chili-recipe.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/899/942/0225709_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/899/942/0225709_126x71.jpg",
+      "relatedUrl": "/recipes/giada-de-laurentiis/strawberry-and-rosemary-scones-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/652/911/0136038_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Giada at Home",
+      "showUrl": "/content/food/shows/g/giada-at-home.html",
+      "hostName": "Giada De Laurentiis",
+      "hostUrl": "/content/food/chefs/giada-de-laurentiis.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/strawberry-and-rosemary-scones-0136038.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/yv_EFhEiWwMT?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/276639811503",
+      "title": "Apricot and Ricotta Clouds",
+      "description": "Sunny serves caramelized honey-balsamic-glazed apricots on ricotta clouds.",
+      "length_hhmmss": "02:28",
+      "length": 148,
+      "length_sss": 148,
+      "nlvid": "0136021",
+      "scrid": "745506",
+      "cmsid": "9e50949b-5825-495a-af32-db36c73be293",
+      "relatedText": "Get the recipe",
+      "relatedUrl": "/recipes/sunny-anderson/balsamic-glazed-apricots-with-ricotta-clouds-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/657/290/0136021_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Cooking for Real",
+      "showUrl": "/content/food/shows/c/cooking-for-real.html",
+      "hostName": "Sunny Anderson",
+      "hostUrl": "/content/food/chefs/sunny-anderson.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/apricot-and-ricotta-clouds-0136021.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/y3Hx98s6amnv?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/277152835519",
+      "title": "New Orleans Style French Toast",
+      "description": "Sunny Anderson cooks up delectable New Orleans style French toast.",
+      "length_hhmmss": "07:30",
+      "length": 450,
+      "length_sss": 450,
+      "nlvid": "0102602",
+      "scrid": "470220",
+      "cmsid": "9eceef4c-50cd-4790-88ae-eedb8ddc11fb",
+      "relatedText": "Get the recipe",
+      "relatedUrl": "/recipes/cooking-for-real/french-toast-with-caramelized-pecans-strawberries-and-cream-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/122/554/0102602_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Cooking for Real",
+      "showUrl": "/content/food/shows/c/cooking-for-real.html",
+      "hostName": "Sunny Anderson",
+      "hostUrl": "/content/food/chefs/sunny-anderson.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/new-orleans-style-french-toast-0102602.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/fFmhacKsSXCv?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/279855683850",
+      "title": "Smoked Salmon Fritatta",
+      "description": "For an easy breakfast dish, Ina Garten recommends Smoked Salmon Frittata.",
+      "length_hhmmss": "02:47",
+      "length": 167,
+      "length_sss": 167,
+      "nlvid": "0101355",
+      "scrid": "445243",
+      "cmsid": "b55b633b-476c-4961-bc81-841562134ed1",
+      "relatedText": "Get the Recipe",
+      "relatedUrl": "/recipes/ina-garten/smoked-salmon-frittata-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/652/183/0101355_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/652/183/0101355_126x71.jpg",
+      "videoFormat": "SD",
+      "showName": "Barefoot Contessa",
+      "showUrl": "/content/food/shows/b/barefoot-contessa.html",
+      "hostName": "Ina Garten",
+      "hostUrl": "/content/food/chefs/ina-garten.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/smoked-salmon-fritatta-0101355.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/BrX8R0o9E13H?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/277154371691",
+      "title": "Marmalade Butter",
+      "description": "Marmalade butter is an easy way to dress up bread for a meal or a snack.",
+      "length_hhmmss": "00:50",
+      "length": 50,
+      "length_sss": 50,
+      "nlvid": "0101356",
+      "scrid": "445244",
+      "cmsid": "9e58619b-bd1d-46c4-8ceb-2965001a3821",
+      "relatedText": "Get the Recipe",
+      "relatedUrl": "/food/recipes/recipe/0,,FOOD_9936_29294,00.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/124/7/0101356_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Barefoot Contessa",
+      "showUrl": "/content/food/shows/b/barefoot-contessa.html",
+      "hostName": "Ina Garten",
+      "hostUrl": "/content/food/chefs/ina-garten.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/marmalade-butter-0101356.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/n5BliD1OwCxe?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/277151299855",
+      "title": "Fruit and Yogurt",
+      "description": "Dress up a healthful fruit salad with this Honey Vanilla Yogurt Sauce.",
+      "length_hhmmss": "03:35",
+      "length": 215,
+      "length_sss": 215,
+      "nlvid": "0101353",
+      "scrid": "445175",
+      "cmsid": "4913d377-072a-456f-b91c-a532f47c781d",
+      "relatedText": "Get the Recipe",
+      "relatedUrl": "/food/recipes/recipe/0,,FOOD_9936_29293,00.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/121/79/0101353_92x69.jpg",
+      "videoFormat": "SD",
+      "showName": "Barefoot Contessa",
+      "showUrl": "/content/food/shows/b/barefoot-contessa.html",
+      "hostName": "Ina Garten",
+      "hostUrl": "/content/food/chefs/ina-garten.html",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/fruit-and-yogurt-0101353.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/YijTdv2vZGlp",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275678275806",
+      "title": "Smoked Salmon Deviled Eggs",
+      "description": "Dress deviled eggs in their party best with chives, smoked salmon and roe.",
+      "length_hhmmss": "03:34",
+      "length": 214,
+      "length_sss": 214,
+      "nlvid": "0169143",
+      "scrid": "1303480",
+      "cmsid": "4ee2216e-dff8-41f9-8517-736bde989292",
+      "relatedText": "Get the recipe",
+      "relatedUrl": "/recipes/ina-garten/smoked-salmon-deviled-eggs-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/764/299/0169143_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/764/299/0169143_126x71.jpg",
       "videoFormat": "HD",
       "showName": "",
       "showUrl": "",
       "hostName": "",
       "hostUrl": "",
       "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/chorizo-and-turkey-chili-0225709.embed.html"
+      "embedUrl": "http://www.foodnetwork.com/videos/smoked-salmon-deviled-eggs-0169143.embed.html"
     },
     {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/wfOEJ9NuKYcx?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279804483595",
-      "title": "Ree's Perfect Pot Roast",
-      "description": "Lots of trial and error went into the recipe for Ree's Perfect Pot Roast.",
-      "length_hhmmss": "04:14",
-      "length": 254,
-      "length_sss": 254,
-      "nlvid": "0216872",
-      "scrid": "2259102",
-      "cmsid": "e12b2a65-6db2-4d54-be32-5857ddf5e5f7",
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/tMcMWGlnh42m?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275081795554",
+      "title": "Eggplant and Asparagus Stacks",
+      "description": "Giada welcomes spring with a classic eggplant and asparagus side dish.",
+      "length_hhmmss": "03:48",
+      "length": 228,
+      "length_sss": 228,
+      "nlvid": "0200331",
+      "scrid": "1882849",
+      "cmsid": "3d6d223b-f26b-4325-86dd-10111dec5af6",
       "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/perfect-pot-roast-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/603/359/0216872_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/603/359/0216872_126x71.jpg",
+      "relatedUrl": "/recipes/giada-de-laurentiis/eggplant-and-asparagus-napoleons-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/195/454/0200331_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/195/454/0200331_126x71.jpg",
       "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/rees-perfect-pot-roast-0216872.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/0sBzDf2wGDxf?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279804995512",
-      "title": "Baked Bean Casserole",
-      "description": "Baked Bean Casserole is a side dish that's hearty enough to be a main dish.",
-      "length_hhmmss": "03:59",
-      "length": 239,
-      "length_sss": 239,
-      "nlvid": "0216870",
-      "scrid": "2259100",
-      "cmsid": "b510e4dd-7219-4daa-b253-ea2997b798a0",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/trisha-yearwood/baked-bean-casserole-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/603/858/0216870_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/603/858/0216870_126x71.jpg",
-      "videoFormat": "HD",
-      "showName": "Trisha's Southern Kitchen",
-      "showUrl": "/content/food/shows/t/trishas-southern-kitchen.html",
-      "hostName": "Trisha Yearwood",
-      "hostUrl": "/content/food/chefs/trisha-yearwood.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/baked-bean-casserole-0216870.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/odxTSaAMbF7w?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279768643761",
-      "title": "Baked Penne with Vegetables",
-      "description": "If you can chop veggies, you can make Giada's Baked Penne With Vegetables.",
-      "length_hhmmss": "05:36",
-      "length": 336,
-      "length_sss": 336,
-      "nlvid": "66711",
-      "scrid": "279117",
-      "cmsid": "ef9633df-bbcb-40f8-a531-6314accafe0f",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/food/recipes/recipe/0,,FOOD_9936_33524,00.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/569/175/66711_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/569/175/66711_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Everyday Italian",
-      "showUrl": "/content/food/shows/e/everyday-italian.html",
+      "showName": "Giada at Home",
+      "showUrl": "/content/food/shows/g/giada-at-home.html",
       "hostName": "Giada De Laurentiis",
       "hostUrl": "/content/food/chefs/giada-de-laurentiis.html",
       "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/baked-penne-with-vegetables-66711.embed.html"
+      "embedUrl": "http://www.foodnetwork.com/videos/eggplant-and-asparagus-stacks-0200331.embed.html"
     },
     {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/DCp6JQY1Ct65?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276768835623",
-      "title": "Classic Italian Lasagna",
-      "description": "Giada shares her secrets foro making traditional Italian lasagna.",
-      "length_hhmmss": "07:47",
-      "length": 467,
-      "length_sss": 467,
-      "nlvid": "0125624",
-      "scrid": "595421",
-      "cmsid": "417e9144-b5ea-4e7a-8327-ce0a1832251e",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/giada-de-laurentiis/classic-italian-lasagna-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/780/339/0125624_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/780/339/0125624_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Everyday Italian",
-      "showUrl": "/content/food/shows/e/everyday-italian.html",
-      "hostName": "Giada De Laurentiis",
-      "hostUrl": "/content/food/chefs/giada-de-laurentiis.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/classic-italian-lasagna-0125624.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/RTW7MVrPdvCj?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/315668035756",
-      "title": "Smoky Triple-C Mac and Cheese",
-      "description": "Rachael uses chorizo and chipotle adobo to spice up Cheddar mac and cheese.",
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/rA7e6aiSZ6wk?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275082307633",
+      "title": "Giada's Smokey Orzo Salad Side",
+      "description": "Giada's use of smoky salt adds a twist to her orzo and tomato spring salad.",
       "length_hhmmss": "04:07",
       "length": 247,
       "length_sss": 247,
-      "nlvid": "0208119",
-      "scrid": "2079554",
-      "cmsid": "039a7fb2-1d86-41be-9fe8-69ee7fefb699",
+      "nlvid": "0200332",
+      "scrid": "1882850",
+      "cmsid": "cb6cecff-2602-40fc-9b5a-bce4fd363823",
       "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/rachael-ray/smoky-chipotle-and-cheddar-mac-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/1013/511/0208119_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/1013/511/0208119_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "30 Minute Meals",
-      "showUrl": "/content/food/shows/3/30-minute-meals.html",
-      "hostName": "Rachael Ray",
-      "hostUrl": "/content/food/chefs/rachael-ray.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/smoky-triple-c-mac-and-cheese-0208119.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/AoYJNLgpJToQ?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/276757571598",
-      "title": "Mac and Cheese with Bacon",
-      "description": "Tyler makes the ultimate kid-friendly dish, macaroni and cheese with bacon.",
-      "length_hhmmss": "04:56",
-      "length": 296,
-      "length_sss": 296,
-      "nlvid": "0126572",
-      "scrid": "603444",
-      "cmsid": "9480f14c-fdbf-49ed-88e4-f95886bc96b2",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/tyler-florence/mac-n-cheese-with-bacon-and-cheese-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/769/603/0126572_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/769/603/0126572_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Tyler's Ultimate",
-      "showUrl": "/content/food/shows/t/tylers-ultimate.html",
-      "hostName": "Tyler Florence",
-      "hostUrl": "/content/food/chefs/tyler-florence.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/mac-and-cheese-with-bacon-0126572.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/2xYlXzpkkJ9q?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/279758403774",
-      "title": "Leftover Baked Potato Soup",
-      "description": "Alton gives a tutorial for the perfect use of leftovers: Baked Potato Soup.",
-      "length_hhmmss": "03:29",
-      "length": 209,
-      "length_sss": 209,
-      "nlvid": "0208114",
-      "scrid": "2079549",
-      "cmsid": "97423e5c-428b-451f-a0b3-e7c114b505e8",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/alton-brown/leftover-baked-potato-soup-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/559/415/0208114_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/559/415/0208114_126x71.jpg",
-      "videoFormat": "SD",
-      "showName": "Good Eats",
-      "showUrl": "/content/food/shows/g/good-eats.html",
-      "hostName": "Alton Brown",
-      "hostUrl": "/content/food/chefs/alton-brown.html",
-      "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/leftover-baked-potato-soup-0208114.embed.html"
-    },
-    {
-      "releaseUrl": "http://link.theplatform.com/s/ip77QC/bhrvmow_m96e?&format=SMIL&MBR=true",
-      "mpxId": "http://data.media.theplatform.com/media/data/Media/315768387926",
-      "title": "Freezer Chicken Pot Pies",
-      "description": "Ree makes four Chicken Pot Pies to fill the freezer for dinners in a hurry.",
-      "length_hhmmss": "04:34",
-      "length": 274,
-      "length_sss": 274,
-      "nlvid": "0216896",
-      "scrid": "2259126",
-      "cmsid": "b2a2d096-308e-4c41-95f2-89a00c293a35",
-      "relatedText": "Get the recipe",
-      "relatedUrl": "/recipes/ree-drummond/chicken-pot-pie-recipe/index.html",
-      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/85/207/0216896_92x69.jpg",
-      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/85/207/0216896_126x71.jpg",
+      "relatedUrl": "/recipes/giada-de-laurentiis/orzo-with-smokey-tomato-vinaigrette-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/195/955/0200332_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/195/955/0200332_126x71.jpg",
       "videoFormat": "HD",
-      "showName": "The Pioneer Woman",
-      "showUrl": "/content/food/shows/t/the-pioneer-woman.html",
-      "hostName": "Ree Drummond",
-      "hostUrl": "/content/food/chefs/ree-drummond.html",
+      "showName": "Giada at Home",
+      "showUrl": "/content/food/shows/g/giada-at-home.html",
+      "hostName": "Giada De Laurentiis",
+      "hostUrl": "/content/food/chefs/giada-de-laurentiis.html",
       "hasSponsorhip": "false",
-      "embedUrl": "http://www.foodnetwork.com/videos/freezer-chicken-pot-pies-0216896.embed.html"
+      "embedUrl": "http://www.foodnetwork.com/videos/giadas-smokey-orzo-salad-side-0200332.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/1p8DDTCJu2Ai?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275084355553",
+      "title": "Ina's Breakfast Brunch Granola",
+      "description": "Ina Garten roasts nuts to make a hearty honey-sweetened granola for brunch.",
+      "length_hhmmss": "02:56",
+      "length": 176,
+      "length_sss": 176,
+      "nlvid": "0200333",
+      "scrid": "1882851",
+      "cmsid": "410b026b-b03a-4d55-9c91-61d204869300",
+      "relatedText": "Get the recipe",
+      "relatedUrl": "/recipes/ina-garten/roasted-hazelnut-granola-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/197/906/0200333_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/197/906/0200333_126x71.jpg",
+      "videoFormat": "HD",
+      "showName": "",
+      "showUrl": "",
+      "hostName": "",
+      "hostUrl": "",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/inas-breakfast-brunch-granola-0200333.embed.html"
+    },
+    {
+      "releaseUrl": "http://link.theplatform.com/s/ip77QC/YLs_ydr7BBTg?&format=SMIL&MBR=true",
+      "mpxId": "http://data.media.theplatform.com/media/data/Media/275083331524",
+      "title": "Ina's Fresh Fruit Platter",
+      "description": "Ina Garten's brunch menu includes a prepared fresh fruit platter.",
+      "length_hhmmss": "02:46",
+      "length": 166,
+      "length_sss": 166,
+      "nlvid": "0200334",
+      "scrid": "1882852",
+      "cmsid": "c06f3ccd-e53b-4310-a8dd-f2c89f2cff72",
+      "relatedText": "Get the recipe",
+      "relatedUrl": "/recipes/ina-garten/fruit-platter-recipe/index.html",
+      "thumbnailUrl": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/196/930/0200334_92x69.jpg",
+      "thumbnailUrl16x9": "http://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/196/930/0200334_126x71.jpg",
+      "videoFormat": "HD",
+      "showName": "",
+      "showUrl": "",
+      "hostName": "",
+      "hostUrl": "",
+      "hasSponsorhip": "false",
+      "embedUrl": "http://www.foodnetwork.com/videos/inas-fresh-fruit-platter-0200334.embed.html"
     }
   ]
 }]} ));
@@ -3852,12 +3345,12 @@ SNI.Food.Toolbar.init({
         <div class="col8 group topics">
                     <h6>Also Try:</h6>
                     <ul class="list">
+                        <li><a href="/topics/spinach-dip-recipes.html"><span>Spinach Dip Recipes</span></a></li>
                         <li><a href="/topics/spinach-salad-recipes.html"><span>Spinach Salad Recipes</span></a></li>
                         <li><a href="/topics/spinach-casserole-recipes.html"><span>Spinach Casserole Recipes</span></a></li>
-                        <li><a href="/topics/spinach-dip-recipes.html"><span>Spinach Dip Recipes</span></a></li>
-                        <li><a href="/topics/spinach.html"><span>Spinach Recipes</span></a></li>
                         <li><a href="/topics/spinach-recipes.html"><span>Spinach Recipes</span></a></li>
-                        <li><a href="/topics/chicken-noodle-soup-recipes.html"><span>Chicken Noodle Soup Recipes</span></a></li>
+                        <li><a href="/topics/spinach.html"><span>Spinach Recipes</span></a></li>
+                        <li><a href="/topics/grilled-chicken-recipes.html"><span>Grilled Chicken Recipes</span></a></li>
                         </ul>
             </div>
         </div>
@@ -3898,64 +3391,60 @@ SNI.Food.Toolbar.init({
 <div class="reviews section">
 
 
-
-	
-
-
 	
 	
 	    <section>
-    		<div class="reviews-filter" data-review-filters="22172" id="review-filter-22172">
-    			<div class="loading">
-    				<div class="absolute-centering">
-    	            	<img alt="Loading review filters..." src="/etc/designs/food/clientlib/img/spinner.gif">
-    	        	</div>
-    	        </div>
-    			<div class="filters">
-    				<header class="hr">
-    					<h5>BROWSE REVIEWS BY KEYWORD</h5>
-    				</header>
-    				<ul class="stack"></ul>
-    			</div>
-    			<div class="content"></div>
-    		</div>
-    	</section>
-    	<script id="global_filter_template" type="text/review-template">
-    		<li><i></i><a rel="ellipsis" id="filter_{{id}}" data-index="{{index}}" data-max="38" href="#">{{name}} <cite>{{count}}</cite></a></li>
-    	</script>
-    	<script id="global_review_template" type="text/review-template">
-     		<div class="media">
-    			<div class="ratings">
-    				{{rating}}
-    			</div>
-    			<p>By {{displayName}} {{location}}</p>
-    			<time datetime="2013-11-02">{{reviewDate}}</time>
-    		</div>
-    		<div class="review">
-    			<div class="wrapper">
-    				{{body}}
-    			</div>
-    		</div>
-    		<div class="bottom">
-    			<div class="count">
-    				<p class="pull-left">
-    					<span class="current">{{current}}</span> of <span class="total">{{total}}</span> reviews for "<b>{{name}}</b>"
-    				</p>
-    				<div class="pull-right">
-    					<a href="#" class="btn fig inverse prev"><i class="ss-left"></i><span>Previous</span></a>
-    					<a href="#" class="btn fig inverse next"><span>Next</span><i class="ss-right"></i></a>
-    				</div>
-    			</div>
-    		</div>
-    	</script>
-    	<script id="global_tryout_template" type="text/review-template">
-    		<p id="intro">Filter reviews by keyword by clicking on the keywords above,<br>or try these popular keywords: <br></p>
-    		<div id="try-now-links">
-    			<div class="try-wrap">
-    				<ul class="tryouts"></ul>
-    			</div>
-    		</div>
-    	</script>
+            <div class="reviews-filter" data-review-filters="22172" id="review-filter-22172">
+                <div class="loading">
+                    <div class="absolute-centering">
+                        <img alt="Loading review filters..." src="/etc/designs/food/clientlib/img/spinner.gif">
+                    </div>
+                </div>
+                <div class="filters">
+                    <header class="hr">
+                        <h5>BROWSE REVIEWS BY KEYWORD</h5>
+                    </header>
+                    <ul class="stack"></ul>
+                </div>
+                <div class="content"></div>
+            </div>
+        </section>
+        <script id="global_filter_template" type="text/review-template">
+            <li><i></i><a rel="ellipsis" id="filter_{{id}}" data-index="{{index}}" data-max="38" href="#">{{name}} <cite>{{count}}</cite></a></li>
+        </script>
+        <script id="global_review_template" type="text/review-template">
+            <div class="media">
+                <div class="ratings">
+                    {{rating}}
+                </div>
+                <p>By {{displayName}} {{location}}</p>
+                <time datetime="2013-11-02">{{reviewDate}}</time>
+            </div>
+            <div class="review">
+                <div class="wrapper">
+                    {{body}}
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="count">
+                    <p class="pull-left">
+                        <span class="current">{{current}}</span> of <span class="total">{{total}}</span> reviews for "<b>{{name}}</b>"
+                    </p>
+                    <div class="pull-right">
+                        <a href="#" class="btn fig inverse prev"><i class="ss-left"></i><span>Previous</span></a>
+                        <a href="#" class="btn fig inverse next"><span>Next</span><i class="ss-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script id="global_tryout_template" type="text/review-template">
+            <p id="intro">Filter reviews by keyword by clicking on the keywords above,<br>or try these popular keywords: <br></p>
+            <div id="try-now-links">
+                <div class="try-wrap">
+                    <ul class="tryouts"></ul>
+                </div>
+            </div>
+        </script>
 		<section class="communityReviews section">
 		    <header class="hr">
                 <h5>Reviews</h5>
@@ -3964,7 +3453,6 @@ SNI.Food.Toolbar.init({
 			<div class="community-comments" id="communityReviews" data-comments='{}'></div>
 		</section>
 	
-
 
 </div>
 </div>
@@ -4048,7 +3536,7 @@ if(typeof mdManager != "undefined"){
             </a>    
             <h6><a href="/shows/all-star-academy.html">All-Star Academy</a></h6>
             <p>Home Cooks Battle for $50k
-                <span>Premieres Sun. Mar. 1 9|8c</span>
+                <span>Sundays 9|8c</span>
             </p>
             
     </div>
@@ -4060,7 +3548,7 @@ if(typeof mdManager != "undefined"){
 </div>
 <div class="parbase teaser section">
         <script type="text/javascript">$CQ(function() {
-            initializeTeaserLoader([{"path":"/content/campaigns/food/sponsored-pod-topregion/master-your-kitchen","name":"master-your-kitchen","title":"Master Your Kitchen","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/master-your-kitchen.thumb.png","id":"sponsored-pod-topregion_master-your-kitchen","segments":["/etc/segmentation/shows-hub","/etc/segmentation/recipes-hub","/etc/segmentation/chefs-hub","/etc/segmentation/restaurants-hub","/etc/segmentation/comfort-food-segment","/etc/segmentation/healthyeveryweekmain","/etc/segmentation/fn_everythingspring","/etc/segmentation/ggg","/etc/segmentation/fn-chopped","/etc/segmentation/fn_valentinesday"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/FC_CC_2015BigGame","name":"FC_CC_2015BigGame","title":"FC/CC 2015 Big Game","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/FC_CC_2015BigGame.thumb.png","id":"sponsored-pod-topregion_FC_CC_2015BigGame","segments":["/etc/segmentation/fn_sb_mainlanding","/etc/segmentation/fn_sb_apps","/etc/segmentation/fn_sb_parties","/etc/segmentation/fn_sb_sweets","/etc/segmentation/fn_sb_cocktails","/etc/segmentation/fn_sb_mains","/etc/segmentation/fn_sb_menuslanding-","/etc/segmentation/fn_sb_ontheroad"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/hgtv-spring-event","name":"hgtv-spring-event","title":"HGTV Spring Event","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/hgtv-spring-event.thumb.png","id":"sponsored-pod-topregion_hgtv-spring-event","segments":["/etc/segmentation/fn_springproduceguide","/etc/segmentation/fn_everythingspring","/etc/segmentation/springentertainingguide","/etc/segmentation/fn-gigya-user-profile"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/cc-fc-easter","name":"cc-fc-easter","title":"CC/FC Easter","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/cc-fc-easter.thumb.png","id":"sponsored-pod-topregion_cc-fc-easter","segments":["/etc/segmentation/fn_easter"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-mother-s-day-2014","name":"fc-cc-mother-s-day-2014","title":"FC/CC Mother's Day 2014","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-mother-s-day-2014.thumb.png","id":"sponsored-pod-topregion_fc-cc-mother-s-day-2014","segments":["/etc/segmentation/fn_mothersday"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/ctk-fan-gear","name":"ctk-fan-gear","title":"CTK Fan Gear","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/ctk-fan-gear.thumb.png","id":"sponsored-pod-topregion_ctk-fan-gear","segments":["/etc/segmentation/fn_cutthroat"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/halloween-kitchen-essentials-shop","name":"halloween-kitchen-essentials-shop","title":"Halloween Kitchen Essentials Shop","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/halloween-kitchen-essentials-shop.thumb.png","id":"sponsored-pod-topregion_halloween-kitchen-essentials-shop","segments":["/etc/segmentation/fn_halloween"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/newsletter-sign-up","name":"newsletter-sign-up","title":"Newsletter Sign Up","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/newsletter-sign-up.thumb.png","id":"sponsored-pod-topregion_newsletter-sign-up","segments":["/etc/segmentation/shows-hub","/etc/segmentation/chefs-hub","/etc/segmentation/recipes-hub","/etc/segmentation/all-recipe-pages","/etc/segmentation/videos"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/tc-cities-app","name":"tc-cities-app","title":"TC Cities App","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/tc-cities-app.thumb.png","id":"sponsored-pod-topregion_tc-cities-app","segments":["/etc/segmentation/diners-drive-ins-and-dives-show-page","/etc/segmentation/restaurants-hub","/etc/segmentation/mobile-page"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fn-store-barware","name":"fn-store-barware","title":"FN Store barware","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fn-store-barware.thumb.png","id":"sponsored-pod-topregion_fn-store-barware","segments":["/etc/segmentation/guysguidetodrinks"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-thanksgiving","name":"fc-cc-thanksgiving","title":"FC/CC Healthy","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-thanksgiving.img.png","id":"sponsored-pod-topregion_fc-cc-thanksgiving","segments":["/etc/segmentation/search-right-rail-"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/bake-a-difference","name":"bake-a-difference","title":"Bake a difference","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/bake-a-difference.thumb.png","id":"sponsored-pod-topregion_bake-a-difference","segments":["/etc/segmentation/bundle_duff","/etc/segmentation/FN_KIDSBAKINGCHAMPIONSHIP","/etc/segmentation/FN_FAMILYMAINLANDING","/etc/segmentation/fn_hc_baking"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/SOBEWFFTickets","name":"SOBEWFFTickets","title":"SOBEWFF Tickets","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/SOBEWFFTickets.thumb.png","id":"sponsored-pod-topregion_SOBEWFFTickets","segments":["/etc/segmentation/SOBEWFF2015"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/MelissaDHealthyCookbook","name":"MelissaDHealthyCookbook","title":"Melissa D Healthy Cookbook","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/MelissaDHealthyCookbook.img.png","id":"sponsored-pod-topregion_MelissaDHealthyCookbook","segments":["/etc/segmentation/MelissaDHealthy"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/FNStoreChopped0","name":"FNStoreChopped0","title":"FN Store Chopped","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/FNStoreChopped0.thumb.png","id":"sponsored-pod-topregion_FNStoreChopped0","segments":["/etc/segmentation/fn-chopped","/etc/segmentation/fn_chopped_allstars"],"tags":[]}], "first", "_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser", "true", "http://localhost:4502/libs/wcm/stats/tracker", "/content/food/regions/recipe/right-rail/default/jcr:content/right-rail/teaser");
+            initializeTeaserLoader([{"path":"/content/campaigns/food/sponsored-pod-topregion/rr-free-shipping","name":"rr-free-shipping","title":"RR Free shipping","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/rr-free-shipping.thumb.png","id":"sponsored-pod-topregion_rr-free-shipping","segments":["/etc/segmentation/bundle_rachaelray"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/master-your-kitchen","name":"master-your-kitchen","title":"Master Your Kitchen","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/master-your-kitchen.thumb.png","id":"sponsored-pod-topregion_master-your-kitchen","segments":["/etc/segmentation/shows-hub","/etc/segmentation/recipes-hub","/etc/segmentation/chefs-hub","/etc/segmentation/restaurants-hub","/etc/segmentation/comfort-food-segment","/etc/segmentation/healthyeveryweekmain","/etc/segmentation/fn_everythingspring","/etc/segmentation/ggg","/etc/segmentation/fn-chopped","/etc/segmentation/fn_valentinesday"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/FC_CC_2015BigGame","name":"FC_CC_2015BigGame","title":"FC/CC 2015 Big Game","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/FC_CC_2015BigGame.thumb.png","id":"sponsored-pod-topregion_FC_CC_2015BigGame","segments":["/etc/segmentation/fn_sb_mainlanding","/etc/segmentation/fn_sb_apps","/etc/segmentation/fn_sb_parties","/etc/segmentation/fn_sb_sweets","/etc/segmentation/fn_sb_cocktails","/etc/segmentation/fn_sb_mains","/etc/segmentation/fn_sb_menuslanding-","/etc/segmentation/fn_sb_ontheroad"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/hgtv-spring-event","name":"hgtv-spring-event","title":"HGTV Spring Event","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/hgtv-spring-event.thumb.png","id":"sponsored-pod-topregion_hgtv-spring-event","segments":["/etc/segmentation/fn_springproduceguide","/etc/segmentation/fn_everythingspring","/etc/segmentation/springentertainingguide","/etc/segmentation/fn-gigya-user-profile"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/cc-fc-easter","name":"cc-fc-easter","title":"CC/FC Easter","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/cc-fc-easter.thumb.png","id":"sponsored-pod-topregion_cc-fc-easter","segments":["/etc/segmentation/fn_easter"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-mother-s-day-2014","name":"fc-cc-mother-s-day-2014","title":"FC/CC Mother's Day 2014","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-mother-s-day-2014.thumb.png","id":"sponsored-pod-topregion_fc-cc-mother-s-day-2014","segments":["/etc/segmentation/fn_mothersday"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/ctk-fan-gear","name":"ctk-fan-gear","title":"CTK Fan Gear","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/ctk-fan-gear.thumb.png","id":"sponsored-pod-topregion_ctk-fan-gear","segments":["/etc/segmentation/fn_cutthroat"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/halloween-kitchen-essentials-shop","name":"halloween-kitchen-essentials-shop","title":"Halloween Kitchen Essentials Shop","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/halloween-kitchen-essentials-shop.thumb.png","id":"sponsored-pod-topregion_halloween-kitchen-essentials-shop","segments":["/etc/segmentation/fn_halloween"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/newsletter-sign-up","name":"newsletter-sign-up","title":"Newsletter Sign Up","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/newsletter-sign-up.thumb.png","id":"sponsored-pod-topregion_newsletter-sign-up","segments":["/etc/segmentation/shows-hub","/etc/segmentation/chefs-hub","/etc/segmentation/recipes-hub","/etc/segmentation/all-recipe-pages","/etc/segmentation/videos"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/tc-cities-app","name":"tc-cities-app","title":"TC Cities App","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/tc-cities-app.thumb.png","id":"sponsored-pod-topregion_tc-cities-app","segments":["/etc/segmentation/diners-drive-ins-and-dives-show-page","/etc/segmentation/restaurants-hub","/etc/segmentation/mobile-page"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fn-store-barware","name":"fn-store-barware","title":"FN Store barware","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fn-store-barware.thumb.png","id":"sponsored-pod-topregion_fn-store-barware","segments":["/etc/segmentation/guysguidetodrinks"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-thanksgiving","name":"fc-cc-thanksgiving","title":"FC/CC Healthy","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/fc-cc-thanksgiving.img.png","id":"sponsored-pod-topregion_fc-cc-thanksgiving","segments":["/etc/segmentation/search-right-rail-"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/bake-a-difference","name":"bake-a-difference","title":"Bake a difference","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/bake-a-difference.thumb.png","id":"sponsored-pod-topregion_bake-a-difference","segments":["/etc/segmentation/bundle_duff","/etc/segmentation/FN_KIDSBAKINGCHAMPIONSHIP","/etc/segmentation/FN_FAMILYMAINLANDING","/etc/segmentation/fn_hc_baking"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/SOBEWFFTickets","name":"SOBEWFFTickets","title":"SOBEWFF Tickets","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/SOBEWFFTickets.thumb.png","id":"sponsored-pod-topregion_SOBEWFFTickets","segments":["/etc/segmentation/SOBEWFF2015"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/MelissaDHealthyCookbook","name":"MelissaDHealthyCookbook","title":"Melissa D Healthy Cookbook","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/MelissaDHealthyCookbook.img.png","id":"sponsored-pod-topregion_MelissaDHealthyCookbook","segments":["/etc/segmentation/MelissaDHealthy"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-topregion/FNStoreChopped0","name":"FNStoreChopped0","title":"FN Store Chopped","campainName":"sponsored-pod-topregion","thumbnail":"/content/campaigns/food/sponsored-pod-topregion/FNStoreChopped0.thumb.png","id":"sponsored-pod-topregion_FNStoreChopped0","segments":["/etc/segmentation/fn-chopped","/etc/segmentation/fn_chopped_allstars"],"tags":[]}], "first", "_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser", "true", "http://localhost:4502/libs/wcm/stats/tracker", "/content/food/regions/recipe/right-rail/default/jcr:content/right-rail/teaser");
         });</script>
         <div id="_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser" class="campaign campaign-sponsored-pod-topregion">
         </div> 
@@ -4230,7 +3718,7 @@ _taboola.push({mode:'top-big-thumbs-2r', container:'taboola-right-rail-3r', plac
 </section>
 <div class="parbase teaser section">
         <script type="text/javascript">$CQ(function() {
-            initializeTeaserLoader([{"path":"/content/campaigns/food/sponsored-pod-bottomregion/HGTVDreamHome2015","name":"HGTVDreamHome2015","title":"HGTV Dream Home 2015","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/HGTVDreamHome2015.img.png","id":"sponsored-pod-bottomregion_HGTVDreamHome2015","segments":["/etc/segmentation/search-right-rail-"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/tc-booze-traveler-2014","name":"tc-booze-traveler-2014","title":"TC Booze Traveler 2014","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/tc-booze-traveler-2014.thumb.png","id":"sponsored-pod-bottomregion_tc-booze-traveler-2014","segments":["/etc/segmentation/fn_hc_cocktails"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/hotel-impossible-sustaining","name":"hotel-impossible-sustaining","title":"Hotel Impossible Sustaining","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/hotel-impossible-sustaining.thumb.png","id":"sponsored-pod-bottomregion_hotel-impossible-sustaining","segments":["/etc/segmentation/bundle_robertirvine"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fn-watch-app","name":"fn-watch-app","title":"FN Watch App","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fn-watch-app.thumb.png","id":"sponsored-pod-bottomregion_fn-watch-app","segments":["/etc/segmentation/videos","/etc/segmentation/fn-gigya-user-profile"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/the-food-com-app","name":"the-food-com-app","title":"The Food.com App","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/the-food-com-app.thumb.png","id":"sponsored-pod-bottomregion_the-food-com-app","segments":["/etc/segmentation/recipes-hub","/etc/segmentation/mobile-page","/etc/segmentation/fn_thekitchen","/etc/segmentation/fn-chopped","/etc/segmentation/fn_cutthroat","/etc/segmentation/fn_grocerygames","/etc/segmentation/diners-drive-ins-and-dives-show-page","/etc/segmentation/bundle_robertirvine"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fn-kitchens-atlanta-airport","name":"fn-kitchens-atlanta-airport","title":"FN Kitchens Atlanta Airport","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fn-kitchens-atlanta-airport.thumb.png","id":"sponsored-pod-bottomregion_fn-kitchens-atlanta-airport","segments":["/etc/segmentation/restaurants-hub","/etc/segmentation/diners-drive-ins-and-dives-show-page"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fc-cc-tc-tg-holiday","name":"fc-cc-tc-tg-holiday","title":"FC/CC/TC TG-HOLIDAY","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fc-cc-tc-tg-holiday.thumb.png","id":"sponsored-pod-bottomregion_fc-cc-tc-tg-holiday","segments":["/etc/segmentation/fn_tg_mainlanding","/etc/segmentation/fn_tg_apps","/etc/segmentation/fn_tg_sides","/etc/segmentation/fn_tg_desserts","/etc/segmentation/fn_tg_cocktails","/etc/segmentation/fn_tg_ontv","/etc/segmentation/fn_tg_turkey","/etc/segmentation/fn_tg_leftovers","/etc/segmentation/fn_tg_stuffing","/etc/segmentation/fn_tg_entertaining"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/travel-s-best-holiday-attractions-2nd-module-on-holiday","name":"travel-s-best-holiday-attractions-2nd-module-on-holiday","title":"Travel's Best Holiday Attractions-2nd module on holiday","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/travel-s-best-holiday-attractions-2nd-module-on-holiday.thumb.png","id":"sponsored-pod-bottomregion_travel-s-best-holiday-attractions-2nd-module-on-holiday","segments":["/etc/segmentation/fn_hc_mainlanding","/etc/segmentation/fn_hc_apps","/etc/segmentation/fn_hc_christmas","/etc/segmentation/fn_hc_baking","/etc/segmentation/fn_hc_budget","/etc/segmentation/fn_hc_hanukkah","/etc/segmentation/fn_hc_cocktails","/etc/segmentation/fn_hc_healthy","/etc/segmentation/fn_hc_ontv","/etc/segmentation/fn_hc_giftguide","/etc/segmentation/fn_hc_entertaining","/etc/segmentation/fn_hc_kwanzaa","/etc/segmentation/fn_hc_newyears","/etc/segmentation/fn_hc_quickeasy"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products-fan-page-store","name":"duff-products-fan-page-store","title":"Duff Products Fan Page-Store","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products-fan-page-store.thumb.png","id":"sponsored-pod-bottomregion_duff-products-fan-page-store","segments":["/etc/segmentation/fn_holidaybakingchampionship","/etc/segmentation/bundle_duff"],"tags":[]}], "first", "_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser_0", "true", "http://localhost:4502/libs/wcm/stats/tracker", "/content/food/regions/recipe/right-rail/default/jcr:content/right-rail/teaser_0");
+            initializeTeaserLoader([{"path":"/content/campaigns/food/sponsored-pod-bottomregion/ggg-tote-bag","name":"ggg-tote-bag","title":"GGG Tote Bag","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/ggg-tote-bag.thumb.png","id":"sponsored-pod-bottomregion_ggg-tote-bag","segments":["/etc/segmentation/guy-fieri-talent-and-show-pages","/etc/segmentation/ggg"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/chopped","name":"chopped","title":"Chopped","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/chopped.thumb.png","id":"sponsored-pod-bottomregion_chopped","segments":["/etc/segmentation/fn_chopped_allstars","/etc/segmentation/fn-chopped"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/ctk-fan-gear","name":"ctk-fan-gear","title":"CTK Fan Gear","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/ctk-fan-gear.thumb.png","id":"sponsored-pod-bottomregion_ctk-fan-gear","segments":["/etc/segmentation/fn_cutthroat","/etc/segmentation/alton-talent--show--recipe-pages"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products","name":"duff-products","title":"Duff Products","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products.thumb.png","id":"sponsored-pod-bottomregion_duff-products","segments":["/etc/segmentation/FN_KIDSBAKINGCHAMPIONSHIP"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/robert-irvine-gear","name":"robert-irvine-gear","title":"Robert Irvine Gear","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/robert-irvine-gear.thumb.png","id":"sponsored-pod-bottomregion_robert-irvine-gear","segments":["/etc/segmentation/bundle_robertirvine"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/HGTVDreamHome2015","name":"HGTVDreamHome2015","title":"HGTV Dream Home 2015","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/HGTVDreamHome2015.img.png","id":"sponsored-pod-bottomregion_HGTVDreamHome2015","segments":["/etc/segmentation/search-right-rail-"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/tc-booze-traveler-2014","name":"tc-booze-traveler-2014","title":"TC Booze Traveler 2014","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/tc-booze-traveler-2014.thumb.png","id":"sponsored-pod-bottomregion_tc-booze-traveler-2014","segments":["/etc/segmentation/fn_hc_cocktails"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/hotel-impossible-sustaining","name":"hotel-impossible-sustaining","title":"Hotel Impossible Sustaining","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/hotel-impossible-sustaining.thumb.png","id":"sponsored-pod-bottomregion_hotel-impossible-sustaining","segments":["/etc/segmentation/bundle_robertirvine"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fn-watch-app","name":"fn-watch-app","title":"FN Watch App","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fn-watch-app.thumb.png","id":"sponsored-pod-bottomregion_fn-watch-app","segments":["/etc/segmentation/videos","/etc/segmentation/fn-gigya-user-profile"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/the-food-com-app","name":"the-food-com-app","title":"The Food.com App","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/the-food-com-app.thumb.png","id":"sponsored-pod-bottomregion_the-food-com-app","segments":["/etc/segmentation/recipes-hub","/etc/segmentation/mobile-page","/etc/segmentation/fn_thekitchen","/etc/segmentation/fn-chopped","/etc/segmentation/fn_cutthroat","/etc/segmentation/fn_grocerygames","/etc/segmentation/diners-drive-ins-and-dives-show-page","/etc/segmentation/bundle_robertirvine"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fn-kitchens-atlanta-airport","name":"fn-kitchens-atlanta-airport","title":"FN Kitchens Atlanta Airport","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fn-kitchens-atlanta-airport.thumb.png","id":"sponsored-pod-bottomregion_fn-kitchens-atlanta-airport","segments":["/etc/segmentation/restaurants-hub","/etc/segmentation/diners-drive-ins-and-dives-show-page"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/fc-cc-tc-tg-holiday","name":"fc-cc-tc-tg-holiday","title":"FC/CC/TC TG-HOLIDAY","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/fc-cc-tc-tg-holiday.thumb.png","id":"sponsored-pod-bottomregion_fc-cc-tc-tg-holiday","segments":["/etc/segmentation/fn_tg_mainlanding","/etc/segmentation/fn_tg_apps","/etc/segmentation/fn_tg_sides","/etc/segmentation/fn_tg_desserts","/etc/segmentation/fn_tg_cocktails","/etc/segmentation/fn_tg_ontv","/etc/segmentation/fn_tg_turkey","/etc/segmentation/fn_tg_leftovers","/etc/segmentation/fn_tg_stuffing","/etc/segmentation/fn_tg_entertaining"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/travel-s-best-holiday-attractions-2nd-module-on-holiday","name":"travel-s-best-holiday-attractions-2nd-module-on-holiday","title":"Travel's Best Holiday Attractions-2nd module on holiday","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/travel-s-best-holiday-attractions-2nd-module-on-holiday.thumb.png","id":"sponsored-pod-bottomregion_travel-s-best-holiday-attractions-2nd-module-on-holiday","segments":["/etc/segmentation/fn_hc_mainlanding","/etc/segmentation/fn_hc_apps","/etc/segmentation/fn_hc_christmas","/etc/segmentation/fn_hc_baking","/etc/segmentation/fn_hc_budget","/etc/segmentation/fn_hc_hanukkah","/etc/segmentation/fn_hc_cocktails","/etc/segmentation/fn_hc_healthy","/etc/segmentation/fn_hc_ontv","/etc/segmentation/fn_hc_giftguide","/etc/segmentation/fn_hc_entertaining","/etc/segmentation/fn_hc_kwanzaa","/etc/segmentation/fn_hc_newyears","/etc/segmentation/fn_hc_quickeasy"],"tags":[]},{"path":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products-fan-page-store","name":"duff-products-fan-page-store","title":"Duff Products Fan Page-Store","campainName":"sponsored-pod-bottomregion","thumbnail":"/content/campaigns/food/sponsored-pod-bottomregion/duff-products-fan-page-store.thumb.png","id":"sponsored-pod-bottomregion_duff-products-fan-page-store","segments":["/etc/segmentation/fn_holidaybakingchampionship","/etc/segmentation/bundle_duff"],"tags":[]}], "first", "_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser_0", "true", "http://localhost:4502/libs/wcm/stats/tracker", "/content/food/regions/recipe/right-rail/default/jcr:content/right-rail/teaser_0");
         });</script>
         <div id="_content_food_regions_recipe_right-rail_default_jcr_content_right-rail_teaser_0" class="campaign campaign-sponsored-pod-bottomregion">
         </div> 
@@ -4329,6 +3817,8 @@ _taboola.push({mode:'top-big-thumbs-2r', container:'taboola-right-rail-3r', plac
                 
                     <li><a target="_blank" href="http://www.amazon.com/foodnetwork" title="Amazon">Amazon</a>, <a target="_blank" href="https://itunes.apple.com/us/artist/television-food-network-g.p./id332170285" title="iTunes">iTunes</a> and <a href="/site/mobile.html" title="Apps">Apps</a></li>
                 
+                    <li><a href="http://www.foodnetworkstore.com/?ecid=PRF-FOOD-100152&amp;pa=PRF-FOOD-100152">Shop Food Network Store</a></li>
+                
                     <li><a title="Share Our Strength" href="/site/share-our-strength.html">No Kid Hungry</a></li>
                 
                     <li><a title="Recipes A-Z" href="/recipes/a-z.html">Recipes A-Z</a></li>
@@ -4351,11 +3841,11 @@ _taboola.push({mode:'top-big-thumbs-2r', container:'taboola-right-rail-3r', plac
         	           
                     
                         <div class="media">
-                            <a href="http://www.travelchannel.com/tv-shows/expedition-unknown?xp=FOOD_TRAVEL_expedition_w_f" class="ico-wrap pull-left">
-                                <img title="Travel Channel: Expedition Unknown" height="68" alt="Travel Channel: Expedition Unknown" width="91" src="http://foodnetwork.sndimg.com/content/dam/images/food/unsized/2015/2/9/0/Expedition_Unknown_92x69.jpg.rend.sni3col.jpeg"/>
+                            <a href="http://www.travelchannel.com/shows/breaking-borders?xp=FOOD_TRAVEL_borders_sus_w_f" class="ico-wrap pull-left">
+                                <img title="Travel Channel: Breaking Borders" height="68" alt="Travel Channel: Breaking Borders" width="91" src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/3/9/BreakingBorders_92x69.jpg.rend.sni3col.jpeg"/>
 							    
                            </a>       
-							    <p><a target="_blank" href="http://www.travelchannel.com/tv-shows/expedition-unknown?xp=FOOD_TRAVEL_expedition_w_f" title="Travel Channel Expedition Unknown">All-New: Expedition Unknown Thursdays 9/8c.</a></p>
+							    <p><a target="_blank" href="http://www.travelchannel.com/tv-shows/expedition-unknown?xp=FOOD_TRAVEL_expedition_w_f" title="Travel Channel Expedition Unknown">All-New: Breaking Borders Sundays 9/8c.</a></p>
                         </div>
                     
             
@@ -4368,36 +3858,40 @@ _taboola.push({mode:'top-big-thumbs-2r', container:'taboola-right-rail-3r', plac
                 <h6><a title="Food.com" target="_blank" href="http://www.food.com?xp=food_footer">Food.com</a><a target="_blank" href="http://www.cookingchanneltv.com?xp=food_footer"></a></h6>
                 <ul class="list">
 				
-                    <li><a target="_blank" href="http://www.food.com/?xp=FOOD_FOODCOM_relaunch_w_f" title="Check Out the New Food.com">Check Out the New Food.com</a></li>
+                    <li><a target="_blank" href="http://www.food.com/?xp=FOOD_FOODCOM_relaunch_w_f" title="Check out the New Food.com">Check Out the New Food.com<br>
+ </a></li>
                 
-                    <li><a target="_blank" href="http://www.food.com/slideshow/best-soup-recipes-12?xp=FOOD_FOODCOM_fccomfort_w_f" title="Top 50 Soup Recipes">Top 50 Soup Recipes</a></li>
+                    <li><a target="_blank" href="http://www.food.com/slideshow/creative-simple-chicken-dinner-recipes-308?xp=fn_footer" title="Say Bye Bye to Boring Chiken">Say Bye to Boring Chicken<br>
+ </a></li>
                 
-                    <li><a target="_blank" href="http://www.food.com/video/5-home-hacks-5?xp=fn_footer" title="How to Shred Chicken">How to Shred Chicken in &lt; a Minute</a></li>
+                    <li><a title="5 Genius Pasta Cooking Hacks" href="http://www.food.com/video/how-to-make-perfect-pasta-23?xp=fn_footer" target="_blank">5 Pasta Cooking Hacks</a></li>
                 
             	</ul>                
             </div>
             <div class="group">
-                <h6><a href="http://www.cookingchanneltv.com/?xp=food_footer" target="_blank" title="Cooking Channel">Cooking Channel</a></h6>
+                <h6><a title="Cooking Channel" target="_blank" href="http://www.cookingchanneltv.com/?xp=food_footer">Cooking Channel</a></h6>
                 <ul class="list">
 				
-                    <li><a target="_blank" href="http://www.cookingchanneltv.com/recipes/one-pot-soups-stews.html?xp=fn_footer" title="Homemade Soup is Better">Homemade Soup is Better<br>
-</a></li>
+                    <li><a title="Homemade Soup is Better" href="http://www.cookingchanneltv.com/recipes/one-pot-soups-stews.html?xp=fn_footer" target="_blank">Homemade Soup is Better<br>
+ </a></li>
                 
-                    <li><a title="Comfort Food Mash-Ups" href="http://www.cookingchanneltv.com/recipes/favorite-comfort-food-combinations.html?xp=FOOD_COOK_cccomfort_w_f" target="_blank">Comfort Food Mash-Ups</a></li>
+                    <li><a target="_blank" href="http://www.cookingchanneltv.com/recipes/favorite-comfort-food-combinations.html?xp=FOOD_COOK_cccomfort_w_f" title="Comfort Food Mash-Ups">Comfort Food Mash-Ups</a></li>
                 
-                    <li><a title="Slow Cooker Recipes" href="http://www.cookingchanneltv.com/recipes/the-best-slow-cooker-recipes.html?xp=fn_footer" target="_blank">25 Slow-Cooker Recipes</a></li>
+                    <li><a target="_blank" href="http://www.cookingchanneltv.com/recipes/the-best-slow-cooker-recipes.html?xp=fn_footer" title="Slow Cooker Recipes">25 Slow-Cooker Recipes</a></li>
                 
             	</ul>                
             </div>
 			<div class="group">
-                <h6><a target="_blank" href="http://www.hgtv.com/?xp=food_footer" title="HGTV">HGTV</a></h6>
+                <h6><a title="HGTV" href="http://www.hgtv.com/?xp=food_footer" target="_blank">HGTV</a></h6>
                 <ul class="list">
 				
-                    <li><a title="Fixer Upper" href="http://www.hgtv.com/shows/fixer-upper/fixer-upper-web-exclusive-design-tips-from-joanna-videos?xp=FOOD_HGTV_fixer_w_f" target="_blank">Fixer Upper: Steal Joanna's Style</a></li>
+                    <li><a title="Make Your Yard a Showstopper" href="http://www.hgtv.com/design/outdoor-design/landscaping-and-hardscaping/gorgeous-landscapes-pictures?xp=FOOD_HGTV_spring_event_w_f" target="_blank">Have a Showstopper Yard</a></li>
                 
-                    <li><a title="40 Inspiring Kitchen Ideas" href="http://www.hgtv.com/design/rooms/kitchens/40-white-kitchens-that-are-anything-but-vanilla-pictures?xp=fn_footer" target="_blank">40 Inspiring Kitchen Ideas</a></li>
+                    <li><a title="Try a Daring Color Palette" href="http://www.hgtv.com/design/rooms/living-and-dining-rooms/20-living-room-color-palettes-youve-never-tried-pictures?xp=FOOD_HGTV_spring_event_w_f" target="_blank">Try a Daring Color Palette<br>
+ </a></li>
                 
-                    <li><a target="_blank" href="http://www.hgtv.com/remodel/packages/smart-simple-solved?xp=fn_footer" title="Tips to Tackle Life's Dilemmas">Tips for Life's Dilemmas</a></li>
+                    <li><a title="5 Ways to Hide Your TV" href="http://www.hgtv.com/design/decorating/clean-and-organize/happy-by-design-videos?xp=fn_footer" target="_blank">5 Ways to Hide Your TV<br>
+ </a></li>
                 
             	</ul>                
             </div>
@@ -4481,7 +3975,7 @@ _taboola.push({mode:'top-big-thumbs-2r', container:'taboola-right-rail-3r', plac
         SuperstitialAd(3);
     </script>
     
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"2623209","applicationTime":792,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"ca450cca9d","transactionName":"ZAYGMhNQDUQCAEILWl1MNgMQRAZEFyJCFkdaARESBB4QWQpOUA1aV0wHCQxBDFkGDUIRGkMCAwMVSBNSEExEB1ZaEwE=","agent":"js-agent.newrelic.com\/nr-536.min.js","errorBeacon":"bam.nr-data.net"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"4176188","applicationTime":798,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"ca450cca9d","transactionName":"ZAYGMhNQDUQCAEILWl1MNgMQRAZEFyJCFkdaARESBB4QWQpOUA1aV0wHCQxBDFkGDUIRGkMCAwMVSBNSEExEB1ZaEwE=","agent":"js-agent.newrelic.com\/nr-593.min.js","errorBeacon":"bam.nr-data.net"}</script>
     
     <script type="text/javascript" src="/etc/designs/food/clientlib-body.min.js"></script>
 
