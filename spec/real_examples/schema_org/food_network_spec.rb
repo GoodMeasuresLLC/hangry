@@ -111,7 +111,7 @@ Food Network Kitchens
 
     its(:name) { should == "Easter Bunny Cake" }
     its(:prep_time) { should == 60 }
-    its(:published_date) { should == Date.parse("2014-12-17") }
+    its(:published_date) { should == Date.parse("2013-11-19") }
     its(:total_time) { should == 60 }
     its(:yield) { should == "12 to 14 servings" }
 
