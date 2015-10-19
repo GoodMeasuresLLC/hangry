@@ -16,7 +16,6 @@ module Hangry
         end
 
         def parse_instructions
-          # => recipeInstructions li
           node_with_itemprop("recipeInstructions").css("li").map(&:content).join("\n")
         end
 

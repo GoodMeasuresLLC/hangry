@@ -3,7 +3,6 @@ require "bundler/gem_tasks"
 
 require 'rspec/core/rake_task'
 require 'httparty'
-# require 'byebug'
 
 RSpec::Core::RakeTask.new(:spec)
 
@@ -49,7 +48,6 @@ task :update_fixtures do
         path = File.join(Dir.pwd, fixture)
         File.open(path, 'w') { |file| file.write(response.body) }
       else
-#        byebug
         puts "failed"
       end
     rescue
