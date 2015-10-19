@@ -13,12 +13,13 @@ module Hangry
 
         def parse_ingredients
           # => ingredients are in the #ingredients div, separated by <br>
-          ing = []
-          recipe_ast.css("#ingredients").children.each do |node|
-            next if node.text.strip.blank? || node.text.strip.downcase == "ingredients"
-            ing << node.text.strip
-          end
-          ing
+          recipe_ast.css("#ingredients").children.map do |node|
+            if node.text.strip.blank? || node.text.strip.downcase == "ingredients"
+              nil
+            else
+              node.text.strip
+            end
+          end.compact
         end
 
       end
