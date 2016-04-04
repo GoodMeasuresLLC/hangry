@@ -11,7 +11,7 @@ describe Hangry do
       expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::Epicurious2Parser)
     end
     
-    its(:author) { should == "Same" }
+    its(:author) { should == "Submitted by same" }
     its(:canonical_url) { should == "http://www.epicurious.com/recipes/member/views/curry-goat-50118923" }
     its(:cook_time) { should == nil }
     its(:description) { should == "This is one of the best curry goat recipes I've tried. What makes it unique from others is the lime juice that gets rubbed on the meat. The taste remains on the meat throughout the simmering and adds just the right zing. I think the best recipes are those that don't need much modification and this one was great as written. It produces a stew with a good consistency...not too thick or thin, and with tons of flavor." }

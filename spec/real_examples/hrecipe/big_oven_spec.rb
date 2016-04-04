@@ -13,12 +13,10 @@ describe Hangry do
       expect(Hangry::ParserClassSelecter.new(html).parser_class).to eq(Hangry::Parsers::NonStandard::BigOvenParser)
     end
 
-    its(:author) do
-      should == "StevesKitchen"
-    end
+    its(:author) { should == "by StevesKitchen" }
     its(:canonical_url) { should == "http://www.bigoven.com/recipe/steves-fish-tacos/178920" }
     its(:cook_time) { should == nil }
-    its(:description) { should == "I had never tried fish tacos until my son, fresh out of boot camp, asked me to make them. I found a basic recipe, then adapted it from there, and now it's one of my favorite things to eat! \"It means little that I think these are the best fish tacos ever. It's a whole different matter that my husband (a devoted fish-taco lover) thinks they're the best. He says the search is over--these are the ones. Thanks, Steve\" - Jankrische" }
+    its(:description) { should == "I had never tried fish tacos until my son, fresh out of boot camp, asked me to make them. I found a basic recipe, then adapted it from there, and now it's one of my favorite things to eat!" }
     its(:image_url) { should == 'http://images.bigoven.com/image/upload/t_recipe-256/steves-fish-tacos-2.jpg' }
     its(:ingredients) {
       should == [
@@ -64,7 +62,7 @@ Fold over and dig in, with a nice IPA or crisp white wine!
       }
     }
     its(:prep_time) { should == nil }
-    its(:published_date) { should == Date.parse("2010-02-02") }
+    its(:published_date) { should == nil }
     its(:total_time) { should == 45 }
     its(:yield) { should == "6 Servings" }
 
