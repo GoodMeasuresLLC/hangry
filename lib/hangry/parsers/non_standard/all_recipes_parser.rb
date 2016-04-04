@@ -8,7 +8,7 @@ module Hangry
         end
 
         def parse_instructions
-          recipe_ast.css('.directions ol').first.content
+          recipe_ast.css('.recipe-directions ol').first.content
         end
 
       end

@@ -11,7 +11,7 @@ describe Hangry do
     its(:canonical_url) { should == "http://www.foodandwine.com/recipes/honey-glazed-roasted-root-vegetables" }
     its(:cook_time) { should == 25 }
     its(:description) { should == "The secret to this sweet, slightly tangy dish: the touch of sherry vinegar in the glaze." }
-    its(:image_url) { should == "http://www.foodandwine.com/images/sys/fw200711_r_gpbrocrootveg.jpg" }
+    its(:image_url) { should == "http://cdn-image.foodandwine.com/sites/default/files/styles/551x551/public/200711-xl-honey-glazed-roasted-root-vegetables.jpg?itok=VlSDyVrG" }
     its(:ingredients) {
       should == [
         "1 1/4 pounds parsnips, peeled and sliced 1/2 inch thick", "1 1/4 pounds carrots, peeled and sliced 1/2 inch thick", "One 1 1/4 pound celery root—peeled, quartered and sliced 1/2 inch thick", "1 1/4 pounds golden beets, peeled and sliced 1/2 inch thick", "1/2 cup extra-virgin olive oil", "1/2 cup honey", "6 thyme sprigs", "Salt and freshly ground pepper", "2 tablespoons sherry vinegar"
@@ -40,7 +40,7 @@ Preheat the oven to 425°. In a large bowl, toss the root vegetables with the oi
       EOS
       should == instructions.strip
     }
-    its(:prep_time) { should == nil }
+    its(:prep_time) { should == 25 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 90 }
     its(:yield) { should == "12" }

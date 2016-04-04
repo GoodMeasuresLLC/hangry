@@ -16,7 +16,7 @@ describe Hangry do
     its(:canonical_url) { should == 'http://www.tasteofhome.com/recipes/rhubarb-popover-pie' }
     its(:cook_time) { should == 20 }
     its(:description) { should == "This fabulous spring breakfast \"pie\" is also delicious when pineapple or even fresh strawberries are mixed in with the rhubarb filling. Yum!—Patricia Kile, Elizabethtown, Pennsylvania." }
-    its(:image_url) { should == "//hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps49051_HCA1864839B02_17_3bC.jpg" }
+    its(:image_url) { should == "//cdn1.tmbi.com/TOH/Images/Photos/37/300x300/exps49051_HCA1864839B02_17_3bC.jpg" }
     its(:ingredients) {
       should == [
         "1/2 cup all-purpose flour",
@@ -35,15 +35,15 @@ describe Hangry do
     its(:name) { should == "Rhubarb Popover Pie Recipe" }
     its(:nutrition) do
       should == {
-        calories: nil,
-        cholesterol: nil,
-        fiber: nil,
-        protein: nil,
+        calories: "1 piece (calculated without whipped cream) equals 279 calories",
+        cholesterol: "109 mg cholesterol",
+        fiber: "1 g fiber",
+        protein: "4 g protein.",
         saturated_fat: nil,
-        sodium: nil,
+        sodium: "239 mg sodium",
         sugar: nil,
-        total_carbohydrates: nil,
-        total_fat: nil,
+        total_carbohydrates: "31 g carbohydrate",
+        total_fat: "16 g fat (10 g saturated fat)",
         trans_fat: nil,
         unsaturated_fat: nil
       }

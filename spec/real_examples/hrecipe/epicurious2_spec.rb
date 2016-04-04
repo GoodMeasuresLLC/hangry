@@ -41,12 +41,12 @@ describe Hangry do
     its(:instructions) do
       # hmm... preserving newlines for Epicurious instructions gives us some crappy results...
       instructions = <<-eos
-Preparation\nRinse goat meat well, rub lime juice over it (from 1/2 whole lime), place meat in a bowl, then add salt, black pepper, Scotch bonnet, thyme, allspice, curry powder, scallions, onion and garlic. Leave to marinate for at least 2 hours in the refrigerator, longer would be ideal. Heat the oil in a skillet until it is very hot, and saute the meat until golden brown. Then add the marinade, tomatoes and coconut milk, if using, and simmer for approximately 3 more minutes. Add water, reduce heat and allow to simmer for 2 to 3 hours stirring occasionally until meat is tender.Instead of simmering for 2-3 hours you can cook goat in a a Pressure Cooker for ~40-45 minutes      
+Preparation\nRinse goat meat well, rub lime juice over it (from 1/2 whole lime), place meat in a bowl, then add salt, black pepper, Scotch bonnet, thyme, allspice, curry powder, scallions, onion and garlic. Leave to marinate for at least 2 hours in the refrigerator, longer would be ideal. Heat the oil in a skillet until it is very hot, and saute the meat until golden brown. Then add the marinade, tomatoes and coconut milk, if using, and simmer for approximately 3 more minutes. Add water, reduce heat and allow to simmer for 2 to 3 hours stirring occasionally until meat is tender.\nInstead of simmering for 2-3 hours you can cook goat in a a Pressure Cooker for ~40-45 minutes
       eos
       should == instructions.strip
     end
 
-    its(:name) { should == "curry goat" }
+    its(:name) { should == "CURRY GOAT" }
     its(:published_date) { should == nil }
     its(:yield) { should == "3 People" }
 

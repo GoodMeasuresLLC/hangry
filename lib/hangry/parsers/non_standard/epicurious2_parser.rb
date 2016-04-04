@@ -8,7 +8,8 @@ module Hangry
         end
 
         def parse_description
-          recipe_ast.css("#recipeIntroText").css(".truncatedTextModuleText").first.content
+          recipe_ast.css('[itemprop = "description"]').first.content
+          #recipe_ast.css("#recipeIntroText").css(".truncatedTextModuleText").first.content
         end
 
         def parse_ingredients

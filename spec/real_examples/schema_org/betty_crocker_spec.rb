@@ -11,7 +11,7 @@ describe Hangry do
     its(:canonical_url) { should == "http://www.bettycrocker.com/recipes/skillet-chicken-nachos/9bf0c3be-09dd-4b1b-8cf4-a9cfa979b232" }
     its(:cook_time) { should == nil }
     its(:description) { should == "Dinner ready in 20 minutes! Enjoy these delicious nachos spooned with chicken mixture sprinkled with cheese and cilantro - perfect for Mexican cuisine." }
-    its(:image_url) { should == 'http://s3.amazonaws.com/gmi-digital-library/ea8c5a0a-da18-45cc-a1f2-c112643dfd56.jpg' }
+    its(:image_url) { should == 'http://images.edge-generalmills.com/ea8c5a0a-da18-45cc-a1f2-c112643dfd56.jpg' }
     its(:ingredients) {
       should == [
         "1 tablespoon olive or vegetable oil",
@@ -54,7 +54,7 @@ Divide tortilla chips between 6 plates. Spoon chicken mixture evenly over chips.
       EOS
       should == instructions.strip
     }
-    its(:prep_time) { should == nil }
+    its(:prep_time) { should == 20 }
     its(:published_date) { should == nil }
     its(:total_time) { should == 20 }
     its(:yield) { should == "6" }
