@@ -30,7 +30,7 @@ describe Hangry do
         "pepper, to taste"
       ]
     }
-    its(:name) { should == "Sautéed Kale" }
+    its(:name) { should == "Sauteed Kale With Garlic and Peppers" }
     its(:nutrition) do
       should == {
         calories: nil,

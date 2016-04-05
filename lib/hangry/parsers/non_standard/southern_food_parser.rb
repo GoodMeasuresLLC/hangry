@@ -8,7 +8,7 @@ module Hangry
         end
 
         def parse_name
-          node_with_itemprop("headline name").content
+          recipe_ast.css(".article-header").first.content.strip
         end
 
         def parse_description
@@ -16,7 +16,7 @@ module Hangry
         end
 
         def parse_instructions
-          node_with_itemprop("recipeInstructions").css("li").map(&:content).join("\n")
+          node_with_itemprop("recipeInstructions").remove.css(">strong").css(">p").map(&:content).join("\n")
         end
 
       end
