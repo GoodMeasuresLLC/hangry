@@ -15,7 +15,7 @@ describe Hangry do
     its(:author) { should == "Diana Rattray" }
     its(:canonical_url) { should == "http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm" }
     its(:cook_time) { should == 13 }
-    its(:description) { should == "This kale recipe is nutritious and delicious, and it's very easy to prepare and cook. There's very little fat in the recipe, and it can be reduced even further by using nonstick cooking spray and a little broth to saute the onion. I used the Portuguese hot crushed red peppers (wet, from jar) in this dish, but feel free to use fresh minced hot peppers for heat.  " }
+    its(:description) { should == "" }
     its(:image_url) { should == "http://f.tqn.com/y/southernfood/1/W/r/Q/3/kale-saute-2.jpg" }
     its(:ingredients) {
       should == [
@@ -49,18 +49,14 @@ describe Hangry do
 
     its(:instructions) {
       instructions = <<-EOS
-To cook the kale, bring a pot of salted water to a boil. Add the chopped kale and boil for 10 to 15 minutes, or until stem portions are tender. Or, follow directions on the package if using frozen kale.
-Heat olive oil in a large skillet or sauté pan over medium heat; cook onion until just tender.
-Add the garlic and cook, stirring, for 1 minute.
-Add crushed red peppers, kale, and vinegar; cook, stirring, for 1 minute longer.
-Add chopped tomato, salt, and pepper; heat through.
+This kale recipe is nutritious and delicious, and it's very easy to prepare and cook. There's very little fat in the recipe, and it can be reduced even further by using and a little broth to saute the onion. I used the Portuguese hot crushed red peppers (wet, from jar) in this dish, but feel free to use fresh minced hot peppers for heat. Alternatively, chopped sweet red bell peppers can be used. To cook the kale, bring a pot of to a boil. Add the chopped kale and boil for 10 to 15 minutes, or until stem portions are tender. Or, follow directions on the package if using frozen kale.Heat olive oil in a large  or  over medium heat; cook onion until just tender.Add the garlic and cook, stirring, for 1 minute.Add crushed red peppers, kale, and vinegar; cook, stirring, for 1 minute longer.Add chopped tomato, salt, and pepper; heat through.Serves 4 to 6.* Portuguese style wet crushed hot red peppers might be found in the ethnic or Spanish section. I found Pastene in my area, but if you can't find the crushed peppers, use any fresh hot chile pepper, finely chopped. Or use sweet bell peppers.\nFollow us:
       EOS
       should == instructions.strip
     }
 
-    its(:prep_time) { should == 12 }
-    its(:published_date) { should == nil }
-    its(:total_time) { should == 25 }
+    its(:prep_time) { should == "12 minutes" }
+    its(:published_date) { should == "February 17, 2016" }
+    its(:total_time) { should == "25 minutes" }
     its(:yield) { should == "Serves 4 to 6" }
 
   end
