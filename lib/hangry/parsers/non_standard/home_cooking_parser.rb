@@ -11,7 +11,15 @@ module Hangry
         end
 
         def parse_name
-          node_with_itemprop("headline name").content
+          recipe_ast.css(".article-header").css("h1").first.content.strip
+        end
+
+        def parse_prep_time
+          node_with_itemprop("recipeTimes.prepTime").next.text
+        end
+
+        def parse_total_time
+          node_with_itemprop("recipeTimes.totalTime").next.text
         end
 
       end

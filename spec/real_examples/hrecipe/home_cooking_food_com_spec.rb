@@ -60,9 +60,9 @@ Preparation\nFor Muffins:Preheat oven to 350 degrees F (175 degrees C). Line sta
       should == instructions.strip
     }
 
-    its(:prep_time) { should == 10 }
+    its(:prep_time) { should == "10 minutes" }
     its(:published_date) { should == nil }
-    its(:total_time) { should == 35 }
+    its(:total_time) { should == "35 minutes" }
     its(:yield) { should == nil }
 
   end
