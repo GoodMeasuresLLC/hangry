@@ -1,19 +1,24 @@
 module Hangry
   module Parsers
     module NonStandard
-      class JamieOliverParser < HRecipeParser
+      class JamieOliverParser < SchemaOrgRecipeParser
 
         def self.can_parse?(html)
           html.include?('jamieoliver.com')
         end
 
-        def parse_description
-          recipe_ast.css(".instructions").css("i").first.content
+        def parse_author
+          "Jamie Oliver"
         end
 
-        def parse_instructions
-          recipe_ast.css(".content").css(".instructions").map(&:content).join("\n") 
+        def parse_ingredients 
+          recipe_ast.css(".ingred-list").css("li").map(&:content)
         end
+
+        def parse_yield
+          recipe_ast.css(".serves").css(".detail_desc").first.next.text.strip
+        end
+
       end
     end
   end
