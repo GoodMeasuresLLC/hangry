@@ -46,7 +46,7 @@ Place breasts in the center of a plastic food storage bag or 2 large sheets of w
 
     its(:name) { should == "Spinach and Mushroom Stuffed Chicken Breasts" }
     its(:prep_time) { should == 15 }
-    its(:published_date) { should == Date.parse("2014-12-16") }
+    its(:published_date) { should == nil }
     its(:total_time) { should == 35 }
     its(:yield) { should == "4 servings" }
 
@@ -71,7 +71,7 @@ Place breasts in the center of a plastic food storage bag or 2 large sheets of w
         "1 tablespoon pure vanilla extract",
         "2 to 3 tablespoons milk",
         "2 baked 9-inch round cake layers (your favorite recipe or an 18.25-ounce boxed cake mix)",
-        "1 1/4s cup sweetened flaked coconut",
+        "1 1/4 cups sweetened flaked coconut",
         "2 store-bought biscotti",
         "1 tube pink decorating icing",
         "2 black jelly beans",
@@ -94,7 +94,7 @@ For the frosting: Combine the sugar, butter and salt in the bowl of a stand mixe
 
     its(:name) { should == "Easter Bunny Cake" }
     its(:prep_time) { should == 60 }
-    its(:published_date) { should == Date.parse("2013-11-19") }
+    its(:published_date) { should == nil }
     its(:total_time) { should == 60 }
     its(:yield) { should == "12 to 14 servings" }
 
