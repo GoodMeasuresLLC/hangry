@@ -40,6 +40,7 @@ task :update_fixtures do
     ['http://www.mrfood.com/Slow-Cooker-Recipes/Saucy-Italian-Pot-Roast-4268', 'spec/fixtures/hrecipe/mrfood.com.html'],
     ['http://southernfood.about.com/od/collardgreens/r/Kale-Saute-Recipe.htm', 'spec/fixtures/hrecipe/southernfood.about.com.html'],
     ['http://www.tasteofhome.com/recipes/rhubarb-popover-pie', 'spec/fixtures/hrecipe/tasteofhome.com.html'],
+    ['http://www.diabetes.org/mfa-recipes/recipes/2017-01-carrot-ginger-soup-with-parsley.html', 'spec/fixtures/hrecipe/diabetes.org.html']
   ].each do |source, fixture|
     begin
       puts "fetching #{source} to update #{fixture}"
